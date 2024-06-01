@@ -40,7 +40,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto">
+      <a href="index.php" class="logo me-auto">
         <img src="assets/img/tripura/nav_logo.png" alt="">
       </a>
 
@@ -1421,7 +1421,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <a href="index.html" class="logo me-auto "><img src="assets/img/tripura/nav_logo.png" alt=""></a>
+              <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/nav_logo.png" alt=""></a>
               <p class="mt-4">
                 2-56-5,
                 <br> SANTHI NAGAR,<br>
