@@ -1200,6 +1200,7 @@
 
                 <img src="assets/img/tripura/angry.png" class="img-fluid">
               </div>
+              
             </div>
 
 
