@@ -66,7 +66,8 @@
                         <div class="container">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h2 class="h2 mb-0 text-info mx-2"> Published Blogs</h2>
-                                <a href="newBlog.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                <a href="newBlog.php"
+                                    class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                         class="fas fa-download fa-sm text-white-50"></i> Create Blog</a>
 
                             </div>
@@ -118,7 +119,7 @@
                                     $conn->close();
                                     ?>
 
-                                    <div class="col-12 col-md-4 col-custom">
+                                    <!-- <div class="col-12 col-md-4 col-custom">
                                         <div class="card card-custom">
                                             <img style='height:200px;  object-fit: cover;'
                                                 src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png"
@@ -171,7 +172,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Pie Chart -->
 
                                 </div>

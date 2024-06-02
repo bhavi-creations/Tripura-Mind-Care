@@ -1,3 +1,22 @@
+<?php
+// Database connection (replace with your actual database connection details)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Tripura";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch blog data
+$sql = "SELECT id, title, content, photos, video FROM blog";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -229,7 +248,7 @@
               </li>
             </ul>
           </div>
-          
+
           <div class="col-lg-8">
             <div class="tab-content">
               <div class="tab-pane active show" id="depression">
@@ -1170,8 +1189,127 @@
 
 
     <!-- =======  Blogs Section ======= -->
-
     <section id="blogs">
+      <div class="container">
+        <div class="section-title">
+          <h2>Blogs</h2>
+        </div>
+
+        <div class="row" id="blogRow">
+          <?php
+          $counter = 0;
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              if ($counter === 0) {
+                echo '<div class="col-md-9  order-2 order-md-1" id="selectedblog">
+                <div id="selectedBlogId" style="display: none">' . $counter . '</div>
+                <h2 class="mb-3">'
+                  . $row['title'] .
+                  '</h2>
+                <video class="custom-video" controls style="width: 100%; height: auto;">
+                  <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p>time stamp 12-04-2024</p>
+                <div class="row d-flex my-3">';
+                $photos_array = json_decode($row['photos'], true);
+                if (!empty($photos_array)):
+                  foreach ($photos_array as $photo): ?>
+                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                      style="width:100px;height:100px;margin:5px;">
+                  <?php endforeach; ?>
+                <?php else: ?>
+                  <p>No photos available.</p>
+                <?php endif;
+                echo '</div>';
+                echo $row['content'];
+                echo '<div style="display: none" id="lastchild"><video class="custom-video" controls style="width: 100%; height: auto;">
+                <source src="admin/uploads/photos/' . $row['video'] . '" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">'
+                  . $row['title'] .
+                  '</h6></div>';
+                echo '</div>';
+                if ($result->num_rows > 1) {
+                  echo '<div class="col-md-3  order-1 order-md-2 scrollable-div">';
+                }
+              } else {
+                echo '<div id="sidebardiv' . $counter . '"><video class="custom-video" controls style="width: 100%; height: auto;">
+                <source src="admin/uploads/photos/' . $row['video'] . '" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">'
+                  . $row['title'] .
+                  '</h6>';
+                echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
+                  <h2 class="mb-3">'
+                  . $row['title'] .
+                  '</h2>
+                  <video class="custom-video" controls style="width: 100%; height: auto;">
+                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <p>time stamp 12-04-2024</p>
+                  <div class="row d-flex my-3">';
+                $photos_array = json_decode($row['photos'], true);
+                if (!empty($photos_array)):
+                  foreach ($photos_array as $photo): ?>
+                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                      style="width:100px;height:100px;margin:5px;">
+                  <?php endforeach; ?>
+                <?php else: ?>
+                  <p>No photos available.</p>
+                <?php endif;
+                echo '</div>';
+                echo $row['content'];
+                echo '</div></div>';
+              }
+              $counter++;
+            }
+            if ($result->num_rows > 1) {
+              echo '</div>';
+            }
+          }
+          ?>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function swapDivs(currentDivId) {
+        var currentDiv = document.getElementById('sidebardiv' + currentDivId);
+        currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText)
+        console.log(document.getElementById('selectedBlogId').innerText)
+        let selectedBlog = document.getElementById('selectedblog');
+        let currentDivLastChild = currentDiv.querySelector('#lastchild');
+        let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
+        var currentDivNewDiv = document.createElement('div');
+        currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
+        let currentDivNewDivLastChild = document.createElement('div');
+        currentDivNewDivLastChild.id = 'lastchild';
+        currentDivNewDivLastChild.style.display = 'none';
+        selectedBlog.removeChild(selectedDivLastChild);
+        selectedBlog.removeChild(document.getElementById('selectedBlogId'));
+        currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
+        currentDivNewDiv.appendChild(currentDivNewDivLastChild);
+        let selectedBlogNewDiv = document.createElement('div');
+        selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
+        let selectedBlogIDNewDiv = document.createElement('div');
+        selectedBlogIDNewDiv.id = 'selectedBlogId';
+        selectedBlogIDNewDiv.innerText = currentDivId;
+        let selectedBlogNewDivLastChild = document.createElement('div');
+        selectedBlogNewDivLastChild.id = 'lastchild';
+        selectedBlogNewDivLastChild.style.display = 'none';
+        currentDiv.removeChild(currentDivLastChild);
+        selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
+        selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
+        selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
+        currentDiv.innerHTML = currentDivNewDiv.innerHTML;
+        selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
+      }
+    </script>
+    <!-- <section id="blogs">
       <div class="container">
         <div class="section-title">
           <h2>Blogs</h2>
@@ -1200,7 +1338,7 @@
 
                 <img src="assets/img/tripura/angry.png" class="img-fluid">
               </div>
-              
+
             </div>
 
 
@@ -1228,18 +1366,9 @@
 
 
           </div>
-          <div class="col-md-3  order-1 order-md-2 scrollable-div">
+          <div class="col-md-3  order-1 order-md-2 scrollable-div"> -->
 
-            <video class="custom-video" controls style="width: 100%; height: auto;">
-              <source src="assets/img/videos/Modern Business Slideshow Youtube Video Ad.mp4" type="video/mp4">
-
-              Your browser does not support the video tag.
-            </video>
-            <h6 class="mb-3">
-              This Blog is about the mind-care center treatments This Blog is about the mind-care center treatments
-            </h6>
-
-            <video class="custom-video" controls style="width: 100%; height: auto;">
+    <!-- <video class="custom-video" controls style="width: 100%; height: auto;">
               <source src="assets/img/videos/Modern Business Slideshow Youtube Video Ad.mp4" type="video/mp4">
 
               Your browser does not support the video tag.
@@ -1295,11 +1424,11 @@
             </video>
             <h6 class="mb-3">
               This Blog is about the mind-care center treatments This Blog is about the mind-care center treatments
-            </h6>
-          </div>
+            </h6> -->
+    <!-- </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- End Blogs Section -->
@@ -1482,8 +1611,9 @@
             <div class="social-links mt-3">
               <a href="https://www.facebook.com/dr.akrstripuraskinandmindclinic/" target="_blank" class="facebook"><i
                   class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/dr.akrs_tripura_mind_and_poly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-          
+              <a href="https://www.instagram.com/dr.akrs_tripura_mind_and_poly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+
 
             </div>
 
