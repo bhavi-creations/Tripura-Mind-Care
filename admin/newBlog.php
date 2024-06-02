@@ -28,9 +28,9 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-      <?php 
-      include 'sidebar.php';
-      ?>
+        <?php
+        include 'sidebar.php';
+        ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -40,9 +40,9 @@
             <div id="content">
 
                 <!-- Topbar -->
-               <?php
-include 'navbar.php';
-               ?>
+                <?php
+                include 'navbar.php';
+                ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -57,7 +57,7 @@ include 'navbar.php';
 
                     <!-- Content Row -->
                     <div class="row">
-                    <div class="col-xl-11 ">
+                        <div class="col-xl-11 ">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
@@ -80,108 +80,127 @@ include 'navbar.php';
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                <div class="mb-3">
-                                    <form style='color:black;'>
-  <label for="exampleFormControlInput1" class="form-label text-primary">ENTER TITLE</label>
-  <input type="TEXT"  class="form-control text-grey-900" id="exampleFormControlInput1" placeholder="TITLE">
-</div>
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+                                    <form style='color:black;' id="addblogform" action="addBlog.php" method="POST"
+                                        enctype="multipart/form-data">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                                TITLE</label>
+                                            <input type="text" class="form-control text-grey-900" name='title'
+                                                id="exampleFormControlInput1" placeholder="TITLE" required>
+                                        </div>
+                                        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+                                            rel="stylesheet" />
 
-<!-- Create the editor container -->
-<label for="exampleFormControlInput1" class="form-label text-primary">ENTER CONTENT</label>
-<div id="editor" style='height:200px;'>
+                                        <!-- Create the editor container -->
+                                        <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                            CONTENT</label>
+                                        <div id="editor" style='height:200px;'></div>
 
-</div>
+                                        <input name="content" id="formcontentdata" style="display: none"></input>
 
-<!-- Include the Quill library -->
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+                                        <!-- Include the Quill library -->
+                                        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
-<!-- Initialize Quill editor -->
-<script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
-  });
-</script>
+                                        <!-- Initialize Quill editor -->
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                const quill = new Quill('#editor', {
+                                                    theme: 'snow'
+                                                });
+                                                console.log(document.querySelector('#formcontentdata'))
+                                                document.querySelector('#addblogform').onsubmit = function () {
+                                                    document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
+                                                };
+                                            });
+                                        </script>
 
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary my-2">Choose Photos (you can choose multiple photos)</label>
-  <input class="form-control" type="file" id="formFileMultiple" multiple>
-</div>
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary">Choose Video</label>
-  <input class="form-control" type="file" id="formFileMultiple" >
-</div>
-<div class='row p-3'>
-<div class='col-xl-7 col-sm-2 '></div><button type='reset' class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button><button type='submit' class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
-</div>
-</form>
+                                        <div class="mb-3">
+                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
+                                                Photos (you can choose multiple photos)</label>
+                                            <input class="form-control" name="photos[]" type="file"
+                                                id="formFileMultiple" multiple required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formFileVideo" class="form-label text-primary">Choose
+                                                Video</label>
+                                            <input class="form-control" name="video" type="file" id="formFileVideo"
+                                                required>
+                                        </div>
+                                        <div class='row p-3'>
+                                            <div class='col-xl-7 col-sm-2'></div>
+                                            <button type='reset'
+                                                class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button>
+                                            <button type='submit'
+                                                class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-</div>
-                       
+
+                    </div>
+                    <!-- /.container-fluid -->
+
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

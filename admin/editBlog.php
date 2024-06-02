@@ -1,3 +1,37 @@
+<?php
+// Database connection (replace with your actual database connection details)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Tripura";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get blog ID from URL
+$blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+if ($blog_id > 0) {
+    // Fetch blog data
+    $stmt = $conn->prepare("SELECT title, content, photos, video FROM blog WHERE id = ?");
+    $stmt->bind_param("i", $blog_id);
+    $stmt->execute();
+    $stmt->bind_result($title, $content, $photos, $video);
+    $stmt->fetch();
+    $stmt->close();
+    $photos_array = json_decode($photos, true);
+} else {
+    echo "Invalid blog ID.";
+    exit;
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,9 +62,9 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-      <?php 
-      include 'sidebar.php';
-      ?>
+        <?php
+        include 'sidebar.php';
+        ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -40,9 +74,9 @@
             <div id="content">
 
                 <!-- Topbar -->
-               <?php
-include 'navbar.php';
-               ?>
+                <?php
+                include 'navbar.php';
+                ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -57,7 +91,7 @@ include 'navbar.php';
 
                     <!-- Content Row -->
                     <div class="row">
-                    <div class="col-xl-11 ">
+                        <div class="col-xl-11 ">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
@@ -80,108 +114,154 @@ include 'navbar.php';
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                <div class="mb-3">
-                                    <form style='color:black;'>
-  <label for="exampleFormControlInput1" class="form-label text-primary">ENTER TITLE</label>
-  <input type="TEXT"  class="form-control text-grey-900" id="exampleFormControlInput1" placeholder="TITLE">
-</div>
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+                                    <form style='color:black;' id="addblogform" action="addBlog.php" method="POST"
+                                        enctype="multipart/form-data">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                                TITLE</label>
+                                            <input type="TEXT" class="form-control text-grey-900"
+                                                id="exampleFormControlInput1"
+                                                value="<?php echo htmlspecialchars($title); ?>" placeholder="TITLE"
+                                                name="title">
+                                        </div>
+                                        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+                                            rel="stylesheet" />
 
-<!-- Create the editor container -->
-<label for="exampleFormControlInput1" class="form-label text-primary">ENTER CONTENT</label>
-<div id="editor" style='height:200px;'>
+                                        <!-- Create the editor container -->
+                                        <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                            CONTENT</label>
+                                        <div id="editor" style='height:200px;'>
+                                            <?php echo $content; ?>
+                                        </div>
+                                        <input name="content" id="formcontentdata" style="display: none"></input>
 
-</div>
+                                        <!-- Include the Quill library -->
+                                        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
-<!-- Include the Quill library -->
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-
-<!-- Initialize Quill editor -->
-<script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
-  });
-</script>
-
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary my-2">Choose Photos (you can choose multiple photos)</label>
-  <input class="form-control" type="file" id="formFileMultiple" multiple>
-</div>
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary">Choose Video</label>
-  <input class="form-control" type="file" id="formFileMultiple" >
-</div>
-<div class='row p-3'>
-<div class='col-xl-7 col-sm-2 '></div><button type='reset' class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button><button type='submit' class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
-</div>
-</form>
+                                        <!-- Initialize Quill editor -->
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                const quill = new Quill('#editor', {
+                                                    theme: 'snow'
+                                                });
+                                                console.log(document.querySelector('#formcontentdata'))
+                                                document.querySelector('#addblogform').onsubmit = function () {
+                                                    document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
+                                                };
+                                            });
+                                        </script>
+                                        <div class="mb-3">
+                                            <label for="photos" class="form-label text-primary my-2">Current
+                                                Photos</label>
+                                            <div>
+                                                <?php if (!empty($photos_array)): ?>
+                                                    <?php foreach ($photos_array as $photo): ?>
+                                                        <img src="uploads/photos/<?php echo htmlspecialchars($photo); ?>"
+                                                            alt="Blog Photo" style="width:100px;height:100px;margin:5px;">
+                                                    <?php endforeach; ?>
+                                                <?php else: ?>
+                                                    <p>No photos available.</p>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
+                                                Photos
+                                                (you can choose multiple photos)</label>
+                                            <input class="form-control" name="photos[]" type="file"
+                                                id="formFileMultiple" multiple>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="video" class="form-label text-primary">Current Video</label>
+                                            <?php if (!empty($video)): ?>
+                                                <video width="320" height="240" controls>
+                                                    <source src="uploads/vudeos/<?php echo htmlspecialchars($video); ?>" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            <?php else: ?>
+                                                <p>No video available.</p>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formFileMultiple" class="form-label text-primary">Choose
+                                                Video</label>
+                                            <input class="form-control" name="video" type="file" id="formFileMultiple">
+                                        </div>
+                                        <input type="hidden" name="id" value="<?php echo $blog_id; ?>">
+                                        <div class='row p-3'>
+                                            <div class='col-xl-7 col-sm-2 '></div><button type='reset'
+                                                class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button><button
+                                                type='submit'
+                                                class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-</div>
-                       
+
+                    </div>
+                    <!-- /.container-fluid -->
+
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
