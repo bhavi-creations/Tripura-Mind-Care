@@ -49,75 +49,69 @@ include 'navbar.php';
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">CREATE BLOG</h1>
-                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
-                    </div>
-
+                    
                     <!-- Content Row -->
-                    <div class="row">
-                    <div class="col-xl-11 ">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-success">CREATE CONTENT</h6>
-                                    <!-- <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                <div class="mb-3">
-                                    <form style='color:black;'>
-  <label for="exampleFormControlInput1" class="form-label text-primary">ENTER TITLE</label>
-  <input type="TEXT"  class="form-control text-grey-900" id="exampleFormControlInput1" placeholder="TITLE">
-</div>
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+                   
+                    
+                    <!-- Content Row -->
+                    <style>
+        
+        .card-custom {
+            margin: 6px; /* Reset margin to prevent extra space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h2 class="h2 mb-0 text-info mx-2"> Published Blogs</h2>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i> Create Blog</a>
+            
+        </div>
+        <div class="row">
+            <div class="row row-custom no-gutters">
 
-<!-- Create the editor container -->
-<label for="exampleFormControlInput1" class="form-label text-primary">ENTER CONTENT</label>
-<div id="editor" style='height:200px;'>
+                <div class="col-12 col-md-4 col-custom">
+                    <div class="card card-custom">
+                        <img style='height:200px;  object-fit: cover;' src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" class="card-img-top p-2" alt="...">
 
-</div>
-
-<!-- Include the Quill library -->
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-
-<!-- Initialize Quill editor -->
-<script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
-  });
-</script>
-
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary my-2">Choose Photos (you can choose multiple photos)</label>
-  <input class="form-control" type="file" id="formFileMultiple" multiple>
-</div>
-<div class="mb-3">
-  <label for="formFileMultiple" class="form-label text-primary">Choose Video</label>
-  <input class="form-control" type="file" id="formFileMultiple" >
-</div>
-<div class='row p-3'>
-<div class='col-xl-7 col-sm-2 '></div><button type='reset' class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button><button type='submit' class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
-</div>
-</form>
-                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style='color:black;'>Blog title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <div class='row'>
+                            <a href="editBlog.php" class="btn btn-warning col-xl-4 mx-3 my-2">Edit Blog</a>   <a href="#" class="col-xl-4 btn btn-danger mx-3 my-2">Delete</a>
                         </div>
-</div>
+    </div>
+                    </div>
+                </div>
+                            <div class="col-12 col-md-4 col-custom">
+                    <div class="card card-custom">
+                        <img style='height:200px;  object-fit: cover;' src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" class="card-img-top p-2" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title" style='color:black;'>Blog title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <div class='row'>
+                            <a href="editblog.php" class="btn btn-warning col-xl-4 mx-3 my-2">Edit Blog</a>   <a href="#" class="col-xl-4 btn btn-danger mx-3 my-2">Delete</a>
+                        </div>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-custom">
+                    <div class="card card-custom">
+                        <img style='height:200px;  object-fit: cover;' src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" class="card-img-top p-2" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title" style='color:black;'>Blog title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <div class='row'>
+                            <a href="editblog.php" class="btn btn-warning col-xl-4 mx-3 my-2">Edit Blog</a>   <a href="#" class="col-xl-4 btn btn-danger mx-3 my-2">Delete</a>
+                        </div>
+    </div>
+                    </div>
+                </div>
+                        <!-- Pie Chart -->
                        
                 </div>
                 <!-- /.container-fluid -->
