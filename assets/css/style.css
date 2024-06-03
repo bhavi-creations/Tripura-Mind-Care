@@ -26,6 +26,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Cactus+Classical+Serif&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: 'Inter', sans-serif;
@@ -251,8 +264,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Azeret Mono", monospace;
-  font-size: 15px;
+  font-family: "Roboto Condensed", sans-serif;  font-size: 15px;
   color: #100f0f;
   white-space: nowrap;
   transition: 0.3s;
@@ -1118,7 +1130,7 @@ section {
   font-size: 18px;
   font-weight: 800;
   transition: 0.3s;
-  font-family: "Lora", serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .departments .nav-link p {
@@ -1163,7 +1175,7 @@ section {
   font-weight: 800;
   margin-bottom: 20px;
   color: #0598d2;
-  font-family: "Lora", serif;
+  font-family: "Roboto Condensed", sans-serif;
 
 }
 
@@ -1592,8 +1604,7 @@ section {
   color: #777777;
   font-weight: 700;
   margin: 10px 0;
-  font-family: "Poetsen One", sans-serif;
-
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .contact .info-box p {
@@ -1601,7 +1612,8 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-  font-family: "Poetsen One", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
 }
 
 .contact .php-email-form {
@@ -1793,25 +1805,26 @@ section {
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
-  font-family: "Lora", serif;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+    font-weight: 500;
 
 }
 
 .mini_text {
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+
   font-weight: 700;
 
 }
 
 .phone_email {
-  font-family: "Kanit", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #01a084;
+  color: #0598d2;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1841,6 +1854,7 @@ section {
   background: #01a084;
   color: #fff;
   transition: 0.3s;
+  
   border-radius: 0 4px 4px 0;
 }
 
@@ -1897,12 +1911,14 @@ section {
 
 
 .poetsen_font {
-  font-family: "Poetsen One", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight:1000;
 }
 
 .para_font {
-  font-family: "Cactus Classical Serif", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
+  line-height: 25px;
 }
 
 
@@ -1913,3 +1929,5 @@ section {
   padding-right: 15px;
    
 }
+
+ 

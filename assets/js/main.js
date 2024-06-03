@@ -235,12 +235,12 @@
         slidesPerView: 1,
         spaceBetween: 20
       },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 0
       },
-      992: {
-        slidesPerView: 5,
+      1200: {
+        slidesPerView:3,
         spaceBetween: 20
       }
     }
