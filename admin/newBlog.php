@@ -103,25 +103,22 @@
 
                                         <!-- Initialize Quill editor -->
                                         <script>
-                                const quill = new Quill('#editor', {
-  modules: {
-    toolbar: [
-      [{ header: [1, 2, false] }],
-      ['bold', 'italic', 'underline'],
-      ['image', 'code-block'],
-    ],
-  },
-  placeholder: 'Compose an epic...',
-  theme: 'snow', // or 'bubble'
-});
+                                            const quill = new Quill('#editor', {
+                                                modules: {
+                                                    toolbar: [
+                                                        [{ header: [1, 2, false] }],
+                                                        ['bold', 'italic', 'underline'],
+                                                        ['image', 'code-block'],
+                                                    ],
+                                                },
+                                                placeholder: 'Compose an epic...',
+                                                theme: 'snow', // or 'bubble'
+                                            });
+                                            document.querySelector('#addblogform').onsubmit = function () {
+                                                document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
+                                            };
                                         </script>
 
-                                        <div class="mb-3">
-                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
-                                                Photos (you can choose multiple photos)</label>
-                                            <input class="form-control" name="photos[]" type="file"
-                                                id="formFileMultiple" multiple required>
-                                        </div>
                                         <div class="mb-3">
                                             <label for="formFileVideo" class="form-label text-primary">Choose
                                                 Video</label>

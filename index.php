@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch blog data
-$sql = "SELECT id, title, content, photos, video FROM blog";
+$sql = "SELECT * FROM blog";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>

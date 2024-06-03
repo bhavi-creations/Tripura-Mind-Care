@@ -18,13 +18,13 @@ $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($blog_id > 0) {
     // Fetch blog data
-    $stmt = $conn->prepare("SELECT title, content, photos, video FROM blog WHERE id = ?");
+    $stmt = $conn->prepare("SELECT title, content, video FROM blog WHERE id = ?");
     $stmt->bind_param("i", $blog_id);
     $stmt->execute();
-    $stmt->bind_result($title, $content, $photos, $video);
+    $stmt->bind_result($title, $content, $video);
     $stmt->fetch();
     $stmt->close();
-    $photos_array = json_decode($photos, true);
+    // $photos_array = json_decode($photos, true);
 } else {
     echo "Invalid blog ID.";
     exit;
@@ -142,7 +142,15 @@ $conn->close();
                                         <script>
                                             document.addEventListener('DOMContentLoaded', function () {
                                                 const quill = new Quill('#editor', {
-                                                    theme: 'snow'
+                                                    modules: {
+                                                        toolbar: [
+                                                            [{ header: [1, 2, false] }],
+                                                            ['bold', 'italic', 'underline'],
+                                                            ['image', 'code-block'],
+                                                        ],
+                                                    },
+                                                    placeholder: 'Compose an epic...',
+                                                    theme: 'snow', // or 'bubble'
                                                 });
                                                 console.log(document.querySelector('#formcontentdata'))
                                                 document.querySelector('#addblogform').onsubmit = function () {
@@ -150,20 +158,6 @@ $conn->close();
                                                 };
                                             });
                                         </script>
-                                        <div class="mb-3">
-                                            <label for="photos" class="form-label text-primary my-2">Current
-                                                Photos</label>
-                                            <div>
-                                                <?php if (!empty($photos_array)): ?>
-                                                    <?php foreach ($photos_array as $photo): ?>
-                                                        <img src="uploads/photos/<?php echo htmlspecialchars($photo); ?>"
-                                                            alt="Blog Photo" style="width:100px;height:100px;margin:5px;">
-                                                    <?php endforeach; ?>
-                                                <?php else: ?>
-                                                    <p>No photos available.</p>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
                                         <div class="mb-3">
                                             <label for="formFileMultiple" class="form-label text-primary my-2">Choose
                                                 Photos
@@ -175,7 +169,8 @@ $conn->close();
                                             <label for="video" class="form-label text-primary">Current Video</label>
                                             <?php if (!empty($video)): ?>
                                                 <video width="320" height="240" controls>
-                                                    <source src="uploads/vudeos/<?php echo htmlspecialchars($video); ?>" type="video/mp4">
+                                                    <source src="uploads/vudeos/<?php echo htmlspecialchars($video); ?>"
+                                                        type="video/mp4">
                                                     Your browser does not support the video tag.
                                                 </video>
                                             <?php else: ?>
