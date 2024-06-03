@@ -103,15 +103,17 @@
 
                                         <!-- Initialize Quill editor -->
                                         <script>
-                                            document.addEventListener('DOMContentLoaded', function () {
-                                                const quill = new Quill('#editor', {
-                                                    theme: 'snow'
-                                                });
-                                                console.log(document.querySelector('#formcontentdata'))
-                                                document.querySelector('#addblogform').onsubmit = function () {
-                                                    document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
-                                                };
-                                            });
+                                const quill = new Quill('#editor', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block'],
+    ],
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow', // or 'bubble'
+});
                                         </script>
 
                                         <div class="mb-3">

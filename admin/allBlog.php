@@ -65,20 +65,21 @@
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h2 class="h2 mb-0 text-info mx-2"> Published Blogs</h2>
                                 <a href="newBlog.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Create Blog</a>
-
+                                
                             </div>
-                            <div class="row">
-                                <div class="row row-custom no-gutters">
-                                    <?php
+                            
+                            <div class='row row-custom no-gutters'>
+                            
+                            <?php
                                     // Database connection (replace with your actual database connection details)
                                     $servername = "localhost";
                                     $username = "root";
                                     $password = "";
-                                    $dbname = "Tripura";
-
+                                    $dbname = "tripura";
+                                    
                                     // Create connection
                                     $conn = new mysqli($servername, $username, $password, $dbname);
-
+                                    
                                     // Check connection
                                     if ($conn->connect_error) {
                                         die("Connection failed: " . $conn->connect_error);
@@ -87,25 +88,26 @@
                                     // Fetch blog data
                                     $sql = "SELECT id, title, content, photos, video FROM blog";
                                     $result = $conn->query($sql);
-
+                                    
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
                                             $photos = json_decode($row['photos'], true);
                                             $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
                                             echo "
-        <div class='col-12 col-md-4 col-custom'>
+                                            <div class='col-12 col-md-4 col-custom'>
             <div class='card card-custom'>
-                <img style='height:200px; object-fit: cover;' src='uploads/photos/{$first_photo}' class='card-img-top p-2' alt='...'>
-                <div class='card-body'>
-                    <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
-                    <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
-                    <div class='row'>
-                        <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
-                        <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
-                    </div>
-                </div>
+            <img style='height:200px; object-fit: cover;' src='uploads/photos/{$first_photo}' class='card-img-top p-2' alt='...'>
+            <div class='card-body'>
+            <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
+            <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
+            <div class='row'>
+            <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
+            <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
             </div>
-        </div>
+                </div>
+                </div>
+                </div>
+
         ";
                                         }
                                     } else {
@@ -114,6 +116,8 @@
 
                                     $conn->close();
                                     ?>
+                                    </div>
+                                    </div>
 
                                     <!-- <div class="col-12 col-md-4 col-custom">
                                         <div class="card card-custom">
