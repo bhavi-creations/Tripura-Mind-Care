@@ -95,7 +95,7 @@ $result = $conn->query($sql);
                   <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <p>time stamp ';
+                <p>Published On ';
                                 ?>
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
@@ -123,7 +123,7 @@ $result = $conn->query($sql);
                     <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                  <p>time stamp ';
+                  <p>Published On ';
                                 ?>
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
