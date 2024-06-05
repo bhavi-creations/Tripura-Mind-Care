@@ -54,7 +54,7 @@ $result = $conn->query($sql);
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
             <a href="index.php" class="logo me-auto">
-            <img src="assets/img/tripura/new-nav-image.png" alt="">
+                <img src="assets/img/tripura/new-nav-image.png" alt="">
             </a>
             <nav id="navbar" class="navbar order-lg-0 ">
                 <ul>
@@ -95,6 +95,48 @@ $result = $conn->query($sql);
                 </video>
                 <p>Published On ';
                     ?>
+
+
+
+                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (1).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (2).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (3).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (4).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                 <div class="row d-flex my-3">';
@@ -140,6 +182,10 @@ $result = $conn->query($sql);
                 </div>
             </div>
         </section>
+
+
+
+
 
         <script>
             function swapDivs(currentDivId) {
