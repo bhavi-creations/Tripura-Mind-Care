@@ -33,9 +33,7 @@ $result = $conn->query($sql);
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -56,7 +54,7 @@ $result = $conn->query($sql);
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
             <a href="index.php" class="logo me-auto">
-                <img src="assets/img/tripura/nav_logo.png" alt="">
+                <img src="assets/img/tripura/new-nav-image.png" alt="">
             </a>
             <nav id="navbar" class="navbar order-lg-0 ">
                 <ul>
@@ -95,8 +93,50 @@ $result = $conn->query($sql);
                   <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <p>time stamp ';
-                                ?>
+                <p>Published On ';
+                    ?>
+
+
+
+                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (1).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (2).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (3).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <img src="assets/img/memory_loss/dp-1 (4).webp" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                 <div class="row d-flex my-3">';
@@ -132,14 +172,14 @@ $result = $conn->query($sql);
                                 </video>
                                 <h6 class="mb-3">' . $row['title'] . '</h6>';
                                 echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
-                                    <h2 class="mb-3">' . $row['title'] . '</h2>
-                                    <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                                        <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <p>time stamp ';
+                  <h2 class="mb-3">' . $row['title'] . '</h2>
+                  <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
+                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <p>Published On ';
                                 ?>
-                                <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
+                    <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                   <div class="row d-flex my-3">';
                                 echo '<div>'; ?>
@@ -166,6 +206,10 @@ $result = $conn->query($sql);
                 </div>
             </div>
         </section>
+
+
+
+
 
         <script>
             function swapDivs(currentDivId) {
@@ -203,62 +247,112 @@ $result = $conn->query($sql);
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
-        <div class="footer-top">
+        <div class="footer-top" style="background-color:rgb(242 252 255);">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-3 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+
+                    <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
+                        <div class="footer-info d-none d-xl-block">
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" style="height:150px;" alt=""></a>
+
+                        </div>
+                        <div class="footer-info d-block d-xl-none">
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" class="img-fluid" alt=""></a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-5 footer-links">
+                        <h4>For Adults</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Facilities</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Gallery</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="blogs.php">Blogs</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Depression</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Anxiety</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Fear</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Anger</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Nerve Weakness</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Sleep Problems</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Migraine</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Stress</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Memory Loss</a></li>
+
+
                         </ul>
                     </div>
 
-                    <div class="col-xl-4 col-lg-3 col-md-6 footer-contact">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Near Dipti Bridge,<br>
-                            Jogendranagar, Agartala,<br>
-                            Tripura (W), PIN-799010 <br><br>
-                            <strong>Phone:</strong> 8415951498, 8415951496<br>
-                            <strong>Email:</strong> tripuramentalhealth@gmail.com<br>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-7 footer-links">
+                        <h4>For Children</h4>
+
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Stress</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Exam Stress for Children</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Lagging Behind in Studies</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Easily Distracted</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Excessive Mischievousness</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Losing Concentration Easily</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Headache</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 footer-newsletter footerbgcolor">
+                        <h4>Contact us</h4>
+                        <p class="mt-2">
+                            <span class="phone_email"> <strong>Phone:</strong></span> <span class="mini_text">+91 9493066633 </span>
+                            <br>
+                            <span class="phone_email"> <strong>Email:</strong></span> <span class="mini_text">
+                                tripuramindcare@gmail.com</span> <br>
                         </p>
-                    </div>
-                    <div class="col-xl-4 col-lg-3 col-md-6 footer-info">
-                        <h3>About Tripura Mind Care</h3>
-                        <p>Tripura Mind Care - (A unit of Cure Heart Centre Pvt. Ltd.) Centre for Mental Health &
-                            Wellness, Near
-                            Dipti Bridge, Jogendranagar, Agartala, Tripura (W), PIN-799010</p>
-                    </div>
-                    <div class="col-xl-4 col-lg-3 col-md-6 footer-info">
-                        <h3>Follow Us</h3>
+                        <p class="mt-4 mini_text">
+                            2-56-5,
+                            <br> SANTHI NAGAR,<br>
+                            ROAD NO.1,<br>
+                            100 BUILDING CENTER,<br>
+
+                            HOUSING BOARD COLONY<br>
+
+                            OPP. CHRISTIAN COMMUNITY HALL
+                            <br>
+                            KAKINADA-533003 <br>
+                            Andhra Pradesh, India
+                            <br><br>
+                        </p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://www.facebook.com/dr.akrstripuraskinandmindclinic/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/dr.akrs_tripura_mind_and_poly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-area-bottom theme-bg">
+            <div class="container">
+                <div class="row  pt-4">
+                    <div class="col-xl-8 col-lg-9 col-md-12 col-12">
+                        <div class="footer-widget__copyright">
+                            <p class="mini_text" style="color:#ffffff"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
+                                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:#ffffff">Bhavi
+                                    Creations</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-3 col-md-12 col-12">
+                        <div class="footer-widget__copyright-info info-direction ">
+                            <p class="mini_text"><a href="terms.html" style="text-decoration: none;color:#ffffff">Terms & conditions
+                                </a>
+                                <a href="privacy.html" style="text-decoration: none;color:#ffffff"> Privacy & policy</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
+    <!-- End Footer -->
 
-        <div class="container footer-bottom clearfix">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Tripura-Mind-Care</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by <a href="#">Grow Your Vision</a>
-            </div>
-        </div>
-    </footer><!-- End Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
