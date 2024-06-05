@@ -33,7 +33,9 @@ $result = $conn->query($sql);
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -94,11 +96,11 @@ $result = $conn->query($sql);
                   Your browser does not support the video tag.
                 </video>
                 <p>Published On ';
-                    ?>
+                                ?>
 
 
 
-                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                                     <div class="swiper-wrapper">
 
                                         <div class="swiper-slide">
@@ -129,23 +131,22 @@ $result = $conn->query($sql);
                                         </div>
 
                                     </div>
-                                </div>
-
-
-
-
-
-
-
+                                </div> -->
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                 <div class="row d-flex my-3">';
                                 echo '<div>'; ?>
                                 <?php if (!empty($row['photos'])): ?>
-                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                        <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                            style="width:100px;height:100px;margin:5px;">
-                                    <?php endforeach; ?>
+                                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                        <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-item">
+                                                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                        style="width:100px;height:100px;margin:5px;" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
                                 <?php else: ?>
                                     <p>No photos available.</p>
                                 <?php endif; ?>
@@ -179,15 +180,21 @@ $result = $conn->query($sql);
                   </video>
                   <p>Published On ';
                                 ?>
-                    <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
+                                <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                   <div class="row d-flex my-3">';
                                 echo '<div>'; ?>
                                 <?php if (!empty($row['photos'])): ?>
-                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                        <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                            style="width:100px;height:100px;margin:5px;">
-                                    <?php endforeach; ?>
+                                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                        <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-item">
+                                                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                        style="width:100px;height:100px;margin:5px;" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
                                 <?php else: ?>
                                     <p>No photos available.</p>
                                 <?php endif; ?>
@@ -253,11 +260,13 @@ $result = $conn->query($sql);
 
                     <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
                         <div class="footer-info d-none d-xl-block">
-                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" style="height:150px;" alt=""></a>
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png"
+                                    style="height:150px;" alt=""></a>
 
                         </div>
                         <div class="footer-info d-block d-xl-none">
-                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" class="img-fluid" alt=""></a>
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png"
+                                    class="img-fluid" alt=""></a>
 
                         </div>
                     </div>
@@ -284,11 +293,15 @@ $result = $conn->query($sql);
 
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.php">Stress</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Exam Stress for Children</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Lagging Behind in Studies</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Exam Stress for Children</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Lagging Behind in Studies</a>
+                            </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.php">Easily Distracted</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Excessive Mischievousness</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Losing Concentration Easily</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Excessive Mischievousness</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Losing Concentration Easily</a>
+                            </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="index.php">Headache</a></li>
                         </ul>
                     </div>
@@ -296,7 +309,8 @@ $result = $conn->query($sql);
                     <div class="col-xl-3 col-lg-4 col-md-6 footer-newsletter footerbgcolor">
                         <h4>Contact us</h4>
                         <p class="mt-2">
-                            <span class="phone_email"> <strong>Phone:</strong></span> <span class="mini_text">+91 9493066633 </span>
+                            <span class="phone_email"> <strong>Phone:</strong></span> <span class="mini_text">+91
+                                9493066633 </span>
                             <br>
                             <span class="phone_email"> <strong>Email:</strong></span> <span class="mini_text">
                                 tripuramindcare@gmail.com</span> <br>
@@ -316,8 +330,10 @@ $result = $conn->query($sql);
                             <br><br>
                         </p>
                         <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/dr.akrstripuraskinandmindclinic/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.instagram.com/dr.akrs_tripura_mind_and_poly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.facebook.com/dr.akrstripuraskinandmindclinic/" target="_blank"
+                                class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/dr.akrs_tripura_mind_and_poly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
 
 
                         </div>
@@ -333,14 +349,17 @@ $result = $conn->query($sql);
                 <div class="row  pt-4">
                     <div class="col-xl-8 col-lg-9 col-md-12 col-12">
                         <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:#ffffff"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
-                                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:#ffffff">Bhavi
+                            <p class="mini_text" style="color:#ffffff"> ©2024 Tripura-Mind-Care . All Rights Reserved.
+                                Designed &
+                                Developed by <a href="https://bhavicreations.com/" target="_blank"
+                                    style="text-decoration: none;color:#ffffff">Bhavi
                                     Creations</a></p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-12 col-12">
                         <div class="footer-widget__copyright-info info-direction ">
-                            <p class="mini_text"><a href="terms.html" style="text-decoration: none;color:#ffffff">Terms & conditions
+                            <p class="mini_text"><a href="terms.html" style="text-decoration: none;color:#ffffff">Terms
+                                    & conditions
                                 </a>
                                 <a href="privacy.html" style="text-decoration: none;color:#ffffff"> Privacy & policy</a>
                             </p>
@@ -352,7 +371,8 @@ $result = $conn->query($sql);
     </footer>
     <!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
