@@ -31,7 +31,7 @@ CREATE TABLE `blog` (
   `id` bigint(20) NOT NULL,
   `title` varchar(200) NOT NULL,
   `content` longtext NOT NULL,
-  -- `photos` text NOT NULL,
+  `photos` text NOT NULL,
   `video` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

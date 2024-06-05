@@ -90,16 +90,17 @@
                                 }
 
                                 // Fetch blog data
-                                $sql = "SELECT id, title, content, video FROM blog";
+                                $sql = "SELECT id, title, photos, content, video FROM blog";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                        // $photos = json_decode($row['photos'], true);
-                                        // $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
+                                        $photos = json_decode($row['photos'], true);
+                                        $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
                                         echo "
                                             <div class='col-12 col-md-4 col-custom'>
             <div class='card card-custom'>
+            <img style='height:200px; object-fit: cover;' src='uploads/photos/{$first_photo}' class='card-img-top p-2' alt='...'>
             <div class='card-body'>
             <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
             <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>

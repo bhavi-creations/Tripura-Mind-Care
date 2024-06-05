@@ -28,12 +28,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($blog_id) {
     // Fetch existing data
-    $stmt = $conn->prepare("SELECT video FROM blog WHERE id = ?");
+    $stmt = $conn->prepare("SELECT photos, video FROM blog WHERE id = ?");
     $stmt->bind_param("i", $blog_id);
     $stmt->execute();
-    $stmt->bind_result($existing_video);
+    $stmt->bind_result($existing_photos, $existing_video);
     $stmt->fetch();
     $stmt->close();
+
+    $existing_photos_array = json_decode($existing_photos, true);
+
+    // Handle file uploads
+    $photo_paths = $existing_photos_array;
+    if (!empty($_FILES['photos']['name'][0])) {
+      // Remove old photos
+      foreach ($existing_photos_array as $photo) {
+        if (file_exists($photo)) {
+          unlink($photo);
+        }
+      }
+      // Upload new photos
+      $photo_paths = [];
+      $photo_directory = "uploads/photos/";
+      foreach ($_FILES['photos']['tmp_name'] as $key => $tmp_name) {
+        $file_name = generateUniqueFileName($_FILES['photos']['name'][$key]);
+        $file_path = $photo_directory . $file_name;
+        if (move_uploaded_file($tmp_name, $file_path)) {
+          $photo_paths[] = $file_path;
+        }
+      }
+    }
 
     $video_path = $existing_video;
     if (!empty($_FILES['video']['name'])) {
@@ -51,8 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Update the blog post in the database
-    $stmt = $conn->prepare("UPDATE blog SET title = ?, content = ?, video = ? WHERE id = ?");
-    $stmt->bind_param("sssi", $title, $content, $video_path, $blog_id);
+    $stmt = $conn->prepare("UPDATE blog SET title = ?, content = ?, photos = ?, video = ? WHERE id = ?");
+    $photo_file_names = [];
+    foreach ($photo_paths as $photo_path) {
+      $photo_file_names[] = basename($photo_path);
+    }
+    $photos_json = json_encode($photo_file_names); // Save photo paths as JSON
+    $stmt->bind_param("ssssi", $title, $content, $photos_json, basename($video_path), $blog_id);
 
     if ($stmt->execute()) {
       echo "Blog post updated successfully!";
@@ -62,6 +90,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       header("Location: editBlog.php?id=$blog_id");
     }
   } else {
+    // Handle file uploads
+    $photo_paths = [];
+    if (!empty($_FILES['photos']['name'][0])) {
+      $photo_directory = "uploads/photos/";
+      foreach ($_FILES['photos']['tmp_name'] as $key => $tmp_name) {
+        $file_name = generateUniqueFileName($_FILES['photos']['name'][$key]);
+        $file_path = $photo_directory . $file_name;
+        if (move_uploaded_file($tmp_name, $file_path)) {
+          $photo_paths[] = $file_path;
+        }
+      }
+    }
+
     $video_path = "";
     if (!empty($_FILES['video']['name'])) {
       $video_directory = "uploads/videos/";
@@ -73,8 +114,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Save the blog post to the database
-    $stmt = $conn->prepare("INSERT INTO blog (title, content, video) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $title, $content, basename($video_path));
+    $stmt = $conn->prepare("INSERT INTO blog (title, content, photos, video) VALUES (?, ?, ?, ?)");
+    $photo_file_names = [];
+    foreach ($photo_paths as $photo_path) {
+      $photo_file_names[] = basename($photo_path);
+    }
+    $photos_json = json_encode($photo_file_names);
+    $stmt->bind_param("ssss", $title, $content, $photos_json, basename($video_path));
 
     if ($stmt->execute()) {
       echo "Blog post published successfully!";
@@ -88,5 +134,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 
+header("Location: allBlog.php");
 $conn->close();
 ?>

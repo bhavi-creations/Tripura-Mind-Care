@@ -118,6 +118,12 @@
                                                 document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
                                             };
                                         </script>
+                                        <div class="mb-3">
+                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
+                                                Photos (you can choose multiple photos)</label>
+                                            <input class="form-control" name="photos[]" type="file"
+                                                id="formFileMultiple" multiple required>
+                                        </div>
 
                                         <div class="mb-3">
                                             <label for="formFileVideo" class="form-label text-primary">Choose

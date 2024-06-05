@@ -100,34 +100,58 @@ $result = $conn->query($sql);
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                 <div class="row d-flex my-3">';
-                                echo '</div>';
+                                echo '<div>'; ?>
+                                <?php if (!empty($row['photos'])): ?>
+                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                        <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                            style="width:100px;height:100px;margin:5px;">
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <p>No photos available.</p>
+                                <?php endif; ?>
+                                <?php echo '</div>';
+                                echo '
+                        </div>';
                                 echo $row['content'];
-                                echo '<div style="display: none" id="lastchild"><video onclick="swapDivs(`' . $counter . '`)" class="custom-video" controls autoplay style="width: 100%; height: auto;">
-                <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6></div>';
+                                echo '<div style="display: none" id="lastchild"><video onclick="swapDivs(`' . $counter . '`)"
+                                class="custom-video" controls autoplay style="width: 100%; height: auto;">
+                                <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
+                        </div>';
                                 echo '</div>';
                                 if ($result->num_rows > 1) {
                                     echo '<div class="col-md-3  order-1 order-md-2 scrollable-div">';
                                 }
                             } else {
-                                echo '<div id="sidebardiv' . $counter . '" onclick="swapDivs(`' . $counter . '`)"><video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <h6 class="mb-3">' . $row['title'] . '</h6>';
+                                echo '<div id="sidebardiv' . $counter . '" onclick="swapDivs(`' . $counter . '`)"><video
+                                    class="custom-video" autoplay controls style="width: 100%; height: auto;">
+                                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <h6 class="mb-3">' . $row['title'] . '</h6>';
                                 echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
-                  <h2 class="mb-3">' . $row['title'] . '</h2>
-                  <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  <p>time stamp ';
+                                    <h2 class="mb-3">' . $row['title'] . '</h2>
+                                    <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
+                                        <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p>time stamp ';
                                 ?>
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                   <div class="row d-flex my-3">';
+                                echo '<div>'; ?>
+                                <?php if (!empty($row['photos'])): ?>
+                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                        <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                            style="width:100px;height:100px;margin:5px;">
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <p>No photos available.</p>
+                                <?php endif; ?>
+                                <?php echo '</div>';
                                 echo '</div>';
                                 echo $row['content'];
                                 echo '</div></div>';
