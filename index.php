@@ -58,7 +58,7 @@ $result = $conn->query($sql);
     <div class="container d-flex align-items-center">
 
       <a href="index.php" class="logo me-auto">
-      <img src="assets/img/tripura/new-nav-image.png" alt="">
+        <img src="assets/img/tripura/new-nav-image.png" alt="">
       </a>
 
 
@@ -157,930 +157,13 @@ $result = $conn->query($sql);
     <!-- End About Us Section -->
 
 
+ 
 
 
 
-    <!-- ======= Departments Section ======= -->
-    <section id="facilities" class="departments  d-none d-md-block">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facilities For Adults</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item mt-2">
-                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#depression" role="tab">
-                  <h4>Depression </h4>
-
-                  <p class="para_font">Comprehensive care and support for managing and overcoming depression.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#anxiety" role="tab">
-                  <h4>Anxiety</h4>
-
-                  <p class="para_font">Effective treatments and support for managing and alleviating anxiety.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fear" role="tab">
-                  <h4>Fear</h4>
-
-                  <p class="para_font">Understanding and addressing the roots of fear to promote mental well-being.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#anger" role="tab">
-                  <h4>Anger</h4>
-
-                  <p class="para_font">Strategies and support for managing and reducing anger effectively.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#nerve-weakness" role="tab">
-                  <h4>Nerve Weakness</h4>
-
-                  <p class="para_font">Comprehensive treatments and therapies to strengthen and heal weak nerves.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#sleep-problem" role="tab">
-                  <h4>Sleep Problems</h4>
-
-                  <p class="para_font">Effective solutions and support for overcoming sleep disorders and achieving
-                    restful sleep.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#migraine" role="tab">
-                  <h4>Migraine</h4>
-
-                  <p class="para_font">Advanced treatments and relief strategies for managing migraine headaches.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#stress-adult" role="tab">
-                  <h4>Stress</h4>
-
-                  <p class="para_font">Holistic approaches and support for effectively managing and reducing stress.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#memory-loss" role="tab">
-                  <h4>Memory Loss</h4>
-
-                  <p class="para_font">Comprehensive care and strategies to improve and manage memory loss.</p>
-
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-8">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="depression">
-                <h3>Depression</h3>
-                <p class=poetsen_font>Comprehensive care and support for managing and overcoming depression.</p>
-
-
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/dp-1 (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/dp-1 (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/dp-1 (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/dp-1 (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-
-                <p class=para_font>At Tripura Mind Care, we understand that depression is a complex, individualized condition that requires personalized treatment. Our expert team of mental health professionals provides comprehensive and tailored plans, combining therapy, medication management, lifestyle modifications, and holistic approaches to promote well-being. </p>
-                <p class=para_font>Through thorough assessment and evaluation, we develop customized plans addressing each individual's unique symptoms, triggers, and goals. We offer a compassionate, supportive environment where clients feel comfortable discussing concerns and working collaboratively with our team. Our empathetic care prioritizes trust, respect, and understanding, empowering clients with tools and resources to build resilience and achieve positive change and growth on their path to overcoming depression.</p>
-
-              </div>
-
-              <div class="tab-pane" id="anxiety">
-                <h3>Anxiety</h3>
-                <p class=poetsen_font>Effective treatments and support for managing and alleviating anxiety.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/anxity1 (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/anxity1 (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/anxity1 (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/anxity1 (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we offer specialized services for individuals struggling with anxiety disorders in a safe and supportive environment. Our expert team provides comprehensive care tailored to each person's unique needs, utilizing evidence-based treatment approaches such as cognitive-behavioral therapy, mindfulness techniques, medication management, and holistic methods. </p>
-
-                <p class=para_font>We create a compassionate space where individuals feel validated and empowered to confront their anxiety challenges without fear of stigma. Our clinicians, highly trained and experienced in diagnosing and treating various anxiety disorders, conduct thorough assessments to develop targeted treatment plans aimed at helping clients regain control over their lives and achieve greater peace of mind and well-being. </p>
-
-
-
-
-              </div>
-
-              <div class="tab-pane" id="fear">
-                <h3>Fear</h3>
-                <p class=poetsen_font>Understanding and addressing the roots of fear to promote mental well-being.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/fear (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/fear (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/fear (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/fear (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we specialize in helping individuals conquer fears and phobias through personalized treatment plans and targeted interventions. Our dedicated team of mental health professionals utilizes evidence-based techniques such as exposure therapy, cognitive-behavioral strategies, relaxation training, and mindfulness practices in a safe and supportive environment. </p>
-
-                <p class=para_font>By tailoring our approach to each individual's unique needs and challenges, we empower clients to confront and manage their fears effectively, building confidence and resilience along the way. We believe in collaboration and partnership with our clients, working closely to ensure their goals and preferences are prioritized throughout their journey toward overcoming fears and reclaiming their lives. At Tripura Mind Care, our commitment to compassion, understanding, and empowerment fosters a supportive atmosphere where clients can feel encouraged and supported as they work towards lasting transformation and emotional well-being. </p>
-
-
-
-
-              </div>
-
-              <div class="tab-pane" id="anger">
-                <h3>Anger</h3>
-                <p class=poetsen_font>Strategies and support for managing and reducing anger effectively.</p>
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/angery (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/angery (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/angery (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/angery (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>Welcome to Tripura Mind Care, where we specialize in providing personalized anger management services to help individuals effectively understand and control their anger. Our dedicated team offers compassionate support to empower you in managing your emotions, exploring root causes, and developing healthy coping strategies and communication skills. We believe in equipping you with the tools needed to manage anger constructively, promoting emotional well-being and fostering healthier relationships. </p>
-
-                <p class=para_font>Join us for individual counseling, group therapy, or engaging workshops tailored to equip you with skills and insights for managing and channeling anger effectively. Let Tripura Mind Care guide you on a transformative journey towards greater self-awareness, improved relationships, and enhanced emotional well-being. Unlock your potential for personal growth and positive change through our specialized anger management programs and resources. </p>
-
-              </div>
-
-
-              <div class="tab-pane" id="nerve-weakness">
-                <h3>Nerve Weakness</h3>
-                <p class=poetsen_font>Comprehensive treatments and therapies to strengthen and heal weak nerves.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/nerve (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/nerve (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/nerve (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/nerve (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we offer a holistic approach to nerve weakness treatment, integrating therapy, medication, and lifestyle modifications to address both the root causes and symptoms comprehensively. Our expert team collaborates to create individualized treatment plans tailored to your specific needs and goals. Therapy sessions help you explore emotional aspects, while medication may manage physical symptoms. </p>
-
-                <p class=para_font> We emphasize lifestyle changes such as exercise, nutrition, stress management, and mindfulness to enhance resilience and promote healing. Prioritizing self-compassion and patience, along with relaxation techniques like deep breathing and meditation, can reduce stress and improve nerve health. With our comprehensive approach, we empower individuals to proactively manage their condition and lead fulfilling lives at Tripura Mind Care. </p>
-
-
-
-              </div>
-
-
-              <div class="tab-pane" id="sleep-problem">
-                <h3>Sleep Problems</h3>
-                <p class=poetsen_font>Effective solutions and support for overcoming sleep disorders and achieving
-                  restful sleep.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/sp (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/sp (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/sp (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/sp (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class=para_font>Sleep problems, such as insomnia, sleep apnea, and restless leg syndrome, can have a profound impact on overall well-being. Insomnia leads to disrupted rest and daytime fatigue, while sleep apnea causes fragmented sleep patterns and decreased oxygen intake. Restless leg syndrome disrupts sleep with an irresistible urge to move the legs. </p>
-
-                <p class=para_font> These issues can affect mental health and cognitive function, increasing the risk of anxiety, depression, and impaired memory and concentration. Addressing sleep problems promptly with professional help and tailored treatment strategies can improve sleep quality, mental health, and cognitive function. Prioritizing good sleep hygiene practices, like maintaining a consistent schedule and optimizing the sleep environment, contributes to better sleep outcomes and overall wellness. </p>
-
-              </div>
-
-
-              <div class="tab-pane" id="migraine">
-                <h3>Migraine</h3>
-                <p class=poetsen_font>Advanced treatments and relief strategies for managing migraine headaches.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/migren (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/migren (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/migren (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/migren (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we prioritize identifying migraine triggers and tailoring personalized treatment plans to effectively manage migraines. Through thorough assessment and tracking, we pinpoint individual triggers, which may include factors like certain foods, hormonal changes, stress, lack of sleep, or environmental stimuli. This tailored approach not only helps manage symptoms but also prevents future migraine episodes. By incorporating preventive measures and self-care strategies into daily routines, such as maintaining a regular sleep schedule, practicing stress-reduction techniques, staying hydrated, and engaging in physical activity, clients can proactively manage their migraines and enhance treatment outcomes.
-                </p>
-
-                <p class=para_font> Keeping a migraine diary to track triggers and symptoms provides valuable insights for refining the treatment plan over time. Educating clients about lifestyle modifications and stress management techniques empowers them to take an active role in managing their migraines outside of clinical settings. Our collaborative approach at Tripura Mind Care supports clients in developing sustainable strategies for long-term relief and improved quality of life.
-                </p>
-
-              </div>
-
-
-              <div class="tab-pane" id="stress-adult">
-                <h3>Stress</h3>
-                <p class=poetsen_font>Holistic approaches and support for effectively managing and reducing stress.
-                </p>
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/stress (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/stress (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/stress (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/stress (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we prioritize stress reduction interventions to promote overall well-being and resilience. Chronic stress can negatively impact physical and mental health, leading to conditions like anxiety, depression, and cardiovascular disease.
-                </p>
-
-                <p class=para_font> By implementing stress management techniques, individuals can enhance their resilience, regulate emotions, and mitigate the effects of stress. We encourage clients to incorporate strategies like mindfulness meditation, deep breathing exercises, regular physical activity, healthy lifestyle choices, and supportive resources into their daily routines. These practical tips empower clients to manage stress effectively, supporting their journey towards optimal mental health and overall wellness.
-
-                </p>
-
-
-
-
-              </div>
-
-
-              <div class="tab-pane" id="memory-loss">
-                <h3>Memory Loss</h3>
-                <p class=poetsen_font>Comprehensive care and strategies to improve and manage memory loss.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/memory_loss_1.webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mm2.webp">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mm3.webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mm5.webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>At Tripura Mind Care, we recognize the significance of memory loss interventions in promoting overall well-being and resilience. Memory challenges can profoundly impact daily life, relationships, and quality of life. By implementing memory enhancement techniques, individuals can bolster cognitive function, enhance daily functioning, and mitigate the effects of memory loss on their health.
-
-                </p>
-
-                <p class=para_font> We encourage clients to integrate strategies such as mental stimulation through puzzles and learning, maintaining a healthy lifestyle, prioritizing adequate sleep, utilizing memory aids, and accessing supportive resources like cognitive training programs and educational materials. These practical steps, supported by Tripura Mind Care, empower clients to effectively manage memory loss, fostering resilience, well-being, and a sense of control over their cognitive health.
-
-
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="facilities2" class="departments d-none d-md-block">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facilities For Children</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item mt-2">
-                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#Stress" role="tab">
-                  <h4>Stress</h4>
-
-                  <p class="para_font">Specialized support and techniques to help children manage and reduce stress
-                    effectively.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#exam-stress" role="tab">
-                  <h4>Exam Stress for Children</h4>
-
-                  <p class="para_font">Support and guidance to help children manage stress during exams effectively.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#lagging-studies" role="tab">
-                  <h4>Lagging Behind in Studies</h4>
-
-                  <p class="para_font">Strategies and support to help children catch up and succeed in their studies.
-                  </p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#easily-distracted" role="tab">
-                  <h4>Easily Distracted</h4>
-
-                  <p class="para_font">Guidance and techniques to help children maintain focus and reduce distractions.
-                  </p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#mischievousness" role="tab">
-                  <h4>Excessive Mischievousness</h4>
-
-                  <p class="para_font">Strategies and guidance to address and manage excessive mischievous behavior in
-                    children.</p>
-
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#concentration" role="tab">
-                  <h4>Losing Concentration Easily</h4>
-
-                  <p class="para_font">Techniques and support to help children maintain focus and concentration
-                    effectively.</p>
-
-                </a>
-              </li>
-
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#headache" role="tab">
-                  <h4>Headache</h4>
-
-                  <p class="para_font">Effective remedies and care to alleviate headaches in children.</p>
-
-                </a>
-              </li>
-            </ul>
-          </div>
-
-
-          <div class="col-lg-8">
-
-            <div class="tab-content">
-              <div class="tab-pane active show" id="Stress">
-                <h3>Stress</h3>
-                <p class=poetsen_font>Specialized support and techniques to help children manage and reduce stress
-                  effectively.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/child-stress (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/child-stress (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/child-stress (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/child-stress (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/child-stress (5).webp" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class=”para_font “>At Tripura Mind Care, we recognize that children encounter stress from various sources, including school, family, and social interactions. That's why we provide child-friendly stress management techniques and interventions to help them cope effectively. Our experienced therapists employ approaches such as play therapy, art therapy, and relaxation exercises to create a supportive environment for children to express their feelings and develop healthy coping strategies.
-
-                </p>
-                <p class=”para_font “>Through play therapy, children explore emotions and build resilience in a safe, non-threatening manner, while art therapy allows them to express themselves creatively. Additionally, our relaxation exercises teach simple techniques like deep breathing and guided imagery to manage stress. Through these interventions, children can develop the skills they need to thrive in their daily lives.
-                </p>
-
-
-
-              </div>
-
-              <div class="tab-pane" id="exam-stress">
-                <h3>Exam Stress for Children</h3>
-                <p class=poetsen_font>Support and guidance to help children manage stress during exams effectively.
-                </p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/exam-stress (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/exam-stress (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/exam-stress (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/exam-stress (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>Exam stress can be overwhelming for children, affecting their confidence, performance, and overall well-being. At Tripura Mind Care, we provide child-friendly relaxation techniques and coping strategies specifically designed to help children manage exam stress and perform their best. Our therapists teach practical techniques such as deep breathing exercises, mindfulness meditation, and visualization to calm minds and reduce anxiety. </p>
-                <p class=para_font>We also offer cognitive-behavioral techniques to help children challenge negative thoughts and develop positive coping strategies. In addition to individual therapy sessions, we provide resources and guidance for parents to create a supportive home environment. By working together, parents can learn to encourage their children, provide emotional support, and foster a positive mindset to promote success during exams..</p>
-
-              </div>
-
-              <div class="tab-pane" id="lagging-studies">
-                <h3>Lagging Behind in Studies</h3>
-                <p class=poetsen_font>Strategies and support to help children catch up and succeed in their studies.
-                </p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/lagging-studies (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/lagging-studies (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/lagging-studies (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/lagging-studies (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>When children struggle academically and fall behind in their studies, it can affect their self-esteem, motivation, and overall academic success. At Tripura Mind Care, we offer tailored academic support and interventions to help children overcome these challenges.</p>
-                <p class=para_font>Our experienced educators and therapists assess each child's learning needs and create personalized intervention plans using evidence-based strategies such as individualized tutoring, skill-building exercises, and academic coaching. Additionally, we provide resources and guidance for parents to support their children's academic progress at home. By working together with Tripura Mind Care, parents can play an active role in their children's education and help them succeed academically.</p>
-
-
-
-              </div>
-
-              <div class="tab-pane" id="easily-distracted">
-                <h3>Easily Distracted</h3>
-                <p class=poetsen_font>Guidance and techniques to help children maintain focus and reduce distractions.
-                </p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/drestrected (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/drestrected (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/drestrected (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/drestrected (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/drestrected (5).webp" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class=para_font>Attention difficulties can significantly impact children's ability to focus, concentrate, and succeed academically. At Tripura Mind Care, we offer specialized assessment and interventions to identify and address these issues. Our experienced psychologists conduct comprehensive evaluations to assess attentional functioning and identify underlying factors contributing to distractibility. </p>
-                <p class=para_font>Based on the results, we develop personalized intervention plans that may include cognitive-behavioral techniques, attention training exercises, and environmental modifications. Additionally, we provide resources and guidance for parents to create a structured and supportive home environment. By working together with Tripura Mind Care, parents can learn effective strategies to help their children develop attention skills and achieve academic success</p>
-
-
-
-              </div>
-
-
-              <div class="tab-pane" id="mischievousness">
-                <h3>Excessive Mischievousness</h3>
-                <p class=poetsen_font>Strategies and guidance to address and manage excessive mischievous behavior in
-                  children.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mischineviss (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mischineviss (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mischineviss (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/mischineviss (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <p class=para_font>Excessive mischievous behavior can challenge children's relationships, academic performance, and social development. At Tripura Mind Care, we offer specialized behavioral interventions to help children regulate their behavior and develop appropriate social skills. Our experienced therapists use evidence-based approaches such as behavior modification, social skills training, and positive reinforcement to promote positive behavior change.
-                </p>
-                <p class=para_font>Through individual therapy sessions and group activities, children learn to manage their impulses, develop empathy, and build positive relationships. Additionally, we provide parents with resources and guidance to set clear expectations, establish consistent routines, and reinforce positive behaviors at home. By working together with Tripura Mind Care, parents can create a supportive and nurturing environment for their children to thrive and succeed. </p>
-              </div>
-
-
-              <div class="tab-pane" id="concentration">
-                <h3>Losing Concentration Easily</h3>
-                <p class=poetsen_font>Techniques and support to help children maintain focus and concentration
-                  effectively.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/concentrition (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/concentrition (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/concentrition (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/concentrition (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>Excessive mischievous behavior can challenge children's relationships, academic performance, and social development. At Tripura Mind Care, we offer specialized behavioral interventions to help children regulate their behavior and develop appropriate social skills. Our experienced therapists use evidence-based approaches such as behavior modification, social skills training, and positive reinforcement to promote positive behavior change.
-
-                </p>
-                <p class=para_font>Through individual therapy sessions and group activities, children learn to manage their impulses, develop empathy, and build positive relationships. Additionally, we provide parents with resources and guidance to set clear expectations, establish consistent routines, and reinforce positive behaviors at home. By working together with Tripura Mind Care, parents can create a supportive and nurturing environment for their children to thrive and succeed.
-                </p>
-
-
-
-              </div>
-
-              <div class="tab-pane" id="headache">
-                <h3>Headache </h3>
-                <p class=poetsen_font>Effective remedies and care to alleviate headaches in children.</p>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/headache (1).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/headache (2).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/headache (3).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                      <div class="testimonial-item">
-                        <img src="assets/img/memory_loss/headache (4).webp" class="img-fluid">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <p class=para_font>Headaches can significantly impact children's daily activities, mood, and overall quality of life. At Tripura Mind Care, we offer child-friendly relaxation techniques and stress management strategies to effectively manage and prevent headaches. Our experienced therapists teach simple and enjoyable techniques, such as deep breathing exercises, progressive muscle relaxation, and guided imagery, to alleviate symptoms and promote relaxation. </p>
-                <p class=para_font> Through individual therapy sessions and group activities, children learn to identify triggers, recognize warning signs, and implement coping strategies to prevent headaches. Additionally, we provide resources and guidance for parents to promote healthy lifestyle habits and support their children in managing headaches effectively. By working together with Tripura Mind Care, parents can learn practical strategies to improve their children's overall well-being. </p>
-
-
-
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-
-
-
-    <section class="ftco-section new_resp  d-md-none">
+    <section class="ftco-section   new_resp  " id="facilities">
       <div class="container">
-      <div class="section-title">
+        <div class="section-title">
           <h2 style="font-size:x-large;">Facilities For Adults</h2>
         </div>
         <div class="ftco-departments">
@@ -1109,7 +192,7 @@ $result = $conn->query($sql);
 
               <div class="tab-pane fade show active" id="v-pills-a" role="tabpanel" aria-labelledby="v-pills-a-tab">
                 <div class="row col-lg-12">
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-12  ">
 
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                       <div class="swiper-wrapper">
@@ -1146,7 +229,7 @@ $result = $conn->query($sql);
 
 
                   </div>
-                  <div class="col-sm-12 col-md-6 mt-5">
+                  <div class="col-12 mt-5">
 
                     <p class=para_font>At Tripura Mind Care, we understand that depression is a complex, individualized condition that requires personalized treatment. Our expert team of mental health professionals provides comprehensive and tailored plans, combining therapy, medication management, lifestyle modifications, and holistic approaches to promote well-being. </p>
                     <p class=para_font>Through thorough assessment and evaluation, we develop customized plans addressing each individual's unique symptoms, triggers, and goals. We offer a compassionate, supportive environment where clients feel comfortable discussing concerns and working collaboratively with our team. Our empathetic care prioritizes trust, respect, and understanding, empowering clients with tools and resources to build resilience and achieve positive change and growth on their path to overcoming depression.</p>
@@ -1160,7 +243,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-b" role="tabpanel" aria-labelledby="v-pills-b-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12  ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1194,7 +277,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12   mt-5">
 
                       <p class=para_font>At Tripura Mind Care, we offer specialized services for individuals struggling with anxiety disorders in a safe and supportive environment. Our expert team provides comprehensive care tailored to each person's unique needs, utilizing evidence-based treatment approaches such as cognitive-behavioral therapy, mindfulness techniques, medication management, and holistic methods. </p>
 
@@ -1211,7 +294,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-c" role="tabpanel" aria-labelledby="v-pills-c-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1245,7 +328,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
 
 
                       <p class=para_font>At Tripura Mind Care, we specialize in helping individuals conquer fears and phobias through personalized treatment plans and targeted interventions. Our dedicated team of mental health professionals utilizes evidence-based techniques such as exposure therapy, cognitive-behavioral strategies, relaxation training, and mindfulness practices in a safe and supportive environment. </p>
@@ -1263,7 +346,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-d" role="tabpanel" aria-labelledby="v-pills-d-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1297,7 +380,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
 
                       <p class=para_font>Welcome to Tripura Mind Care, where we specialize in providing personalized anger management services to help individuals effectively understand and control their anger. Our dedicated team offers compassionate support to empower you in managing your emotions, exploring root causes, and developing healthy coping strategies and communication skills. We believe in equipping you with the tools needed to manage anger constructively, promoting emotional well-being and fostering healthier relationships. </p>
 
@@ -1312,7 +395,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-e" role="tabpanel" aria-labelledby="v-pills-e-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
 
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
@@ -1347,7 +430,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
 
                       <p class=para_font>At Tripura Mind Care, we offer a holistic approach to nerve weakness treatment, integrating therapy, medication, and lifestyle modifications to address both the root causes and symptoms comprehensively. Our expert team collaborates to create individualized treatment plans tailored to your specific needs and goals. Therapy sessions help you explore emotional aspects, while medication may manage physical symptoms. </p>
 
@@ -1363,7 +446,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-f" role="tabpanel" aria-labelledby="v-pills-f-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1397,7 +480,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
                       <p class=para_font>Sleep problems, such as insomnia, sleep apnea, and restless leg syndrome, can have a profound impact on overall well-being. Insomnia leads to disrupted rest and daytime fatigue, while sleep apnea causes fragmented sleep patterns and decreased oxygen intake. Restless leg syndrome disrupts sleep with an irresistible urge to move the legs. </p>
 
                       <p class=para_font> These issues can affect mental health and cognitive function, increasing the risk of anxiety, depression, and impaired memory and concentration. Addressing sleep problems promptly with professional help and tailored treatment strategies can improve sleep quality, mental health, and cognitive function. Prioritizing good sleep hygiene practices, like maintaining a consistent schedule and optimizing the sleep environment, contributes to better sleep outcomes and overall wellness. </p>
@@ -1412,7 +495,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-g" role="tabpanel" aria-labelledby="v-pills-g-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
 
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
@@ -1447,7 +530,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
                       <p class=para_font>At Tripura Mind Care, we prioritize identifying migraine triggers and tailoring personalized treatment plans to effectively manage migraines. Through thorough assessment and tracking, we pinpoint individual triggers, which may include factors like certain foods, hormonal changes, stress, lack of sleep, or environmental stimuli. This tailored approach not only helps manage symptoms but also prevents future migraine episodes. By incorporating preventive measures and self-care strategies into daily routines, such as maintaining a regular sleep schedule, practicing stress-reduction techniques, staying hydrated, and engaging in physical activity, clients can proactively manage their migraines and enhance treatment outcomes.
                       </p>
 
@@ -1463,7 +546,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-h" role="tabpanel" aria-labelledby="v-pills-h-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1497,7 +580,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
                       <p class=para_font>At Tripura Mind Care, we prioritize stress reduction interventions to promote overall well-being and resilience. Chronic stress can negatively impact physical and mental health, leading to conditions like anxiety, depression, and cardiovascular disease.
                       </p>
 
@@ -1514,7 +597,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-i" role="tabpanel" aria-labelledby="v-pills-i-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12 ">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1548,7 +631,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12  mt-5">
                       <p class=para_font>At Tripura Mind Care, we recognize the significance of memory loss interventions in promoting overall well-being and resilience. Memory challenges can profoundly impact daily life, relationships, and quality of life. By implementing memory enhancement techniques, individuals can bolster cognitive function, enhance daily functioning, and mitigate the effects of memory loss on their health.
 
                       </p>
@@ -1570,12 +653,12 @@ $result = $conn->query($sql);
     </section>
 
 
-    <section class="ftco-section new_resp   d-md-none">
+    <section class="ftco-section    new_resp   " id="facilities2">
       <div class="container">
-      <div class="section-title">
+        <div class="section-title">
 
-      <h2 style="font-size:x-large;">Facilities For Children</h2>
-      </div>
+          <h2 style="font-size:x-large;">Facilities For Children</h2>
+        </div>
 
         <div class="ftco-departments">
           <div class="col-md-12 nav-link-wrap" style="background-color: rgb(236, 234, 234); padding-top: 10px; padding-bottom: 10px; border-radius: 8px; margin-bottom: 50px;">
@@ -1596,7 +679,7 @@ $result = $conn->query($sql);
 
               <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
                 <div class="row col-lg-12">
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-12">
 
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                       <div class="swiper-wrapper">
@@ -1635,7 +718,7 @@ $result = $conn->query($sql);
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6 mt-5">
+                  <div class="col-12 mt-5">
                     <p class="para_font">At Tripura Mind Care, we recognize that children encounter stress from various sources, including school, family, and social interactions. That's why we provide child-friendly stress management techniques and interventions to help them cope effectively. Our experienced therapists employ approaches such as play therapy, art therapy, and relaxation exercises to create a supportive environment for children to express their feelings and develop healthy coping strategies.
 
                     </p>
@@ -1651,7 +734,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1685,7 +768,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
                       <p class=para_font>Exam stress can be overwhelming for children, affecting their confidence, performance, and overall well-being. At Tripura Mind Care, we provide child-friendly relaxation techniques and coping strategies specifically designed to help children manage exam stress and perform their best. Our therapists teach practical techniques such as deep breathing exercises, mindfulness meditation, and visualization to calm minds and reduce anxiety. </p>
 
                       <p class=para_font>We also offer cognitive-behavioral techniques to help children challenge negative thoughts and develop positive coping strategies. In addition to individual therapy sessions, we provide resources and guidance for parents to create a supportive home environment. By working together, parents can learn to encourage their children, provide emotional support, and foster a positive mindset to promote success during exams.</p>
@@ -1699,7 +782,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1733,7 +816,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
                       <p class=para_font>When children struggle academically and fall behind in their studies, it can affect their self-esteem, motivation, and overall academic success. At Tripura Mind Care, we offer tailored academic support and interventions to help children overcome these challenges.</p>
                       <p class=para_font>Our experienced educators and therapists assess each child's learning needs and create personalized intervention plans using evidence-based strategies such as individualized tutoring, skill-building exercises, and academic coaching. Additionally, we provide resources and guidance for parents to support their children's academic progress at home. By working together with Tripura Mind Care, parents can play an active role in their children's education and help them succeed academically.</p>
 
@@ -1748,7 +831,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
 
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
@@ -1788,7 +871,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
 
                       <p class=para_font>Attention difficulties can significantly impact children's ability to focus, concentrate, and succeed academically. At Tripura Mind Care, we offer specialized assessment and interventions to identify and address these issues. Our experienced psychologists conduct comprehensive evaluations to assess attentional functioning and identify underlying factors contributing to distractibility. </p>
                       <p class=para_font>Based on the results, we develop personalized intervention plans that may include cognitive-behavioral techniques, attention training exercises, and environmental modifications. Additionally, we provide resources and guidance for parents to create a structured and supportive home environment. By working together with Tripura Mind Care, parents can learn effective strategies to help their children develop attention skills and achieve academic success</p>
@@ -1802,7 +885,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1837,7 +920,7 @@ $result = $conn->query($sql);
                       </div>
 
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
 
                       <p class=para_font>Excessive mischievous behavior can challenge children's relationships, academic performance, and social development. At Tripura Mind Care, we offer specialized behavioral interventions to help children regulate their behavior and develop appropriate social skills. Our experienced therapists use evidence-based approaches such as behavior modification, social skills training, and positive reinforcement to promote positive behavior change.
                       </p>
@@ -1853,7 +936,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1887,7 +970,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
                       <p class=para_font>Excessive mischievous behavior can challenge children's relationships, academic performance, and social development. At Tripura Mind Care, we offer specialized behavioral interventions to help children regulate their behavior and develop appropriate social skills. Our experienced therapists use evidence-based approaches such as behavior modification, social skills training, and positive reinforcement to promote positive behavior change.
 
                       </p>
@@ -1904,7 +987,7 @@ $result = $conn->query($sql);
               <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-7-tab">
                 <div class="row departments">
                   <div class="col-lg-12 row">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-12">
                       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -1938,7 +1021,7 @@ $result = $conn->query($sql);
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
+                    <div class="col-12 mt-5">
                       <p class=para_font>Headaches can significantly impact children's daily activities, mood, and overall quality of life. At Tripura Mind Care, we offer child-friendly relaxation techniques and stress management strategies to effectively manage and prevent headaches. Our experienced therapists teach simple and enjoyable techniques, such as deep breathing exercises, progressive muscle relaxation, and guided imagery, to alleviate symptoms and promote relaxation. </p>
                       <p class=para_font> Through individual therapy sessions and group activities, children learn to identify triggers, recognize warning signs, and implement coping strategies to prevent headaches. Additionally, we provide resources and guidance for parents to promote healthy lifestyle habits and support their children in managing headaches effectively. By working together with Tripura Mind Care, parents can learn practical strategies to improve their children's overall well-being. </p>
                     </div>
@@ -1946,13 +1029,7 @@ $result = $conn->query($sql);
                 </div>
               </div>
 
-
-
-
-
-
-
-
+ 
             </div>
           </div>
         </div>
@@ -2357,16 +1434,16 @@ $result = $conn->query($sql);
       <div class="container">
         <div class="row">
 
-        <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
-                        <div class="footer-info d-none d-xl-block">
-                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" style="height:150px;" alt=""></a>
+          <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
+            <div class="footer-info d-none d-xl-block">
+              <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" style="height:150px;" alt=""></a>
 
-                        </div>
-                        <div class="footer-info d-block d-xl-none">
-                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" class="img-fluid" alt=""></a>
+            </div>
+            <div class="footer-info d-block d-xl-none">
+              <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" class="img-fluid" alt=""></a>
 
-                        </div>
-                    </div>
+            </div>
+          </div>
           <div class="col-xl-2 col-lg-2 col-md-6 col-5 footer-links">
             <h4>For Adults</h4>
             <ul>
