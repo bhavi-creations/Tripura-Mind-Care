@@ -58,7 +58,7 @@ $result = $conn->query($sql);
     <div class="container d-flex align-items-center">
 
       <a href="index.php" class="logo me-auto">
-        <img src="assets/img/tripura/nav_logo.png" alt="">
+      <img src="assets/img/tripura/new-nav-image.png" alt="">
       </a>
 
 
@@ -2357,17 +2357,16 @@ $result = $conn->query($sql);
       <div class="container">
         <div class="row">
 
-          <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
-            <div class="footer-info d-none d-xl-block">
-              <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/nav_logo.png" style="height:150px;" alt=""></a>
+        <div class="col-xl-4 col-lg-3 col-md-6 d-flex flex-column justify-content-center">
+                        <div class="footer-info d-none d-xl-block">
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" style="height:150px;" alt=""></a>
 
-            </div>
-            <div class="footer-info d-block d-xl-none">
-              <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/nav_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-info d-block d-xl-none">
+                            <a href="index.php" class="logo me-auto "><img src="assets/img/tripura/new-nav-image.png" class="img-fluid" alt=""></a>
 
-            </div>
-          </div>
-
+                        </div>
+                    </div>
           <div class="col-xl-2 col-lg-2 col-md-6 col-5 footer-links">
             <h4>For Adults</h4>
             <ul>
