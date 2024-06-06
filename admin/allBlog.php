@@ -123,7 +123,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="col-12 col-md-4 col-custom">
+                                    <!-- <div class="col-12 col-md-4 col-custom">
                                         <div class="card card-custom">
                                             <img style='height:200px;  object-fit: cover;'
                                                 src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png"
@@ -189,7 +189,12 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <div class="footer-widget__copyright">
+                            <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
+                            Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:blue">Bhavi
+                            Creations</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </footer>

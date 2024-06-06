@@ -212,12 +212,17 @@ $conn->close();
 
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2021</span>
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <div class="footer-widget__copyright">
+                            <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
+                            Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:blue">Bhavi
+                            Creations</a>
+                            </p>
                         </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
                 <!-- End of Footer -->
 
             </div>
