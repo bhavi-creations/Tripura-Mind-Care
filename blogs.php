@@ -76,13 +76,13 @@ $result = $conn->query($sql);
 
     <main>
         <!-- ======= Blogs Section ======= -->
-        <section id="blogs">
-            <div class="container">
-                <div class="section-title">
+        <section id="blogs"  >
+            <div class="container"  >
+                <div class="section-title" style="margin-top: 100px;" >
                     <h2>Blogs</h2>
                 </div>
 
-                <div class="row" id="blogRow">
+                <div class="row" id="blogRow" >
                     <?php
                     $counter = 0;
                     if ($result->num_rows > 0) {
