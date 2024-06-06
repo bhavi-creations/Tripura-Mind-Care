@@ -127,7 +127,7 @@ $result = $conn->query($sql);
 
             <p class=poetsen_font>
               At Tripura Mind Care, we provide comprehensive mental health services under the expert guidance of Dr. S.
-              Akhila, MD (Physician), and K. Hemalatha, a seasoned psychologist.
+              Akhila, MD (psychiatry), and K. Hemalatha, a seasoned psychologist.
             </p>
             <ul>
               <li class="para_font"><i class="bi bi-check-circle"></i> 1. Personalized Treatment: Each patient receives
