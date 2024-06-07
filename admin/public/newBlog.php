@@ -108,7 +108,7 @@
                                                     toolbar: [
                                                         [{ header: [1, 2, false] }],
                                                         ['bold', 'italic', 'underline'],
-                                                        [ 'code-block'],
+                                                        ['image', 'code-block'],
                                                     ],
                                                 },
                                                 placeholder: 'Compose an epic...',
@@ -118,12 +118,6 @@
                                                 document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
                                             };
                                         </script>
-                                        <div class="mb-3">
-                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
-                                                Photos (you can choose multiple photos)</label>
-                                            <input class="form-control" name="photos[]" type="file"
-                                                id="formFileMultiple" multiple required>
-                                        </div>
 
                                         <div class="mb-3">
                                             <label for="formFileVideo" class="form-label text-primary">Choose
@@ -151,17 +145,12 @@
 
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
-                            Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:blue">Bhavi
-                            Creations</a>
-                            </p>
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
                         </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
                 <!-- End of Footer -->
 
             </div>
@@ -189,7 +178,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.php">Logout</a>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
             </div>

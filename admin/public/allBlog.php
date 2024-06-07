@@ -90,17 +90,16 @@
                                 }
 
                                 // Fetch blog data
-                                $sql = "SELECT id, title, photos, content, video FROM blog";
+                                $sql = "SELECT id, title, content, video FROM blog";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                        $photos = json_decode($row['photos'], true);
-                                        $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
+                                        // $photos = json_decode($row['photos'], true);
+                                        // $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
                                         echo "
                                             <div class='col-12 col-md-4 col-custom'>
             <div class='card card-custom'>
-            <img style='height:200px; object-fit: cover;' src='uploads/photos/{$first_photo}' class='card-img-top p-2' alt='...'>
             <div class='card-body'>
             <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
             <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
@@ -123,7 +122,7 @@
                             </div>
                         </div>
 
-                                    <!-- <div class="col-12 col-md-4 col-custom">
+                        <!-- <div class="col-12 col-md-4 col-custom">
                                         <div class="card card-custom">
                                             <img style='height:200px;  object-fit: cover;'
                                                 src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png"
@@ -189,12 +188,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
-                            Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:blue">Bhavi
-                            Creations</a>
-                            </p>
-                        </div>
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -226,7 +220,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Logout</a>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>

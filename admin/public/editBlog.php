@@ -18,13 +18,13 @@ $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($blog_id > 0) {
     // Fetch blog data
-    $stmt = $conn->prepare("SELECT title,photos, content, video FROM blog WHERE id = ?");
+    $stmt = $conn->prepare("SELECT title, content, video FROM blog WHERE id = ?");
     $stmt->bind_param("i", $blog_id);
     $stmt->execute();
-    $stmt->bind_result($title, $photos, $content, $video);
+    $stmt->bind_result($title, $content, $video);
     $stmt->fetch();
     $stmt->close();
-    $photos_array = json_decode($photos, true);
+    // $photos_array = json_decode($photos, true);
 } else {
     echo "Invalid blog ID.";
     exit;
@@ -158,16 +158,6 @@ $conn->close();
                                                 };
                                             });
                                         </script>
-                                        <div>
-                                            <?php if (!empty($photos_array)): ?>
-                                                <?php foreach ($photos_array as $photo): ?>
-                                                    <img src="uploads/photos/<?php echo htmlspecialchars($photo); ?>"
-                                                        alt="Blog Photo" style="width:100px;height:100px;margin:5px;">
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
-                                                <p>No photos available.</p>
-                                            <?php endif; ?>
-                                        </div>
                                         <div class="mb-3">
                                             <label for="formFileMultiple" class="form-label text-primary my-2">Choose
                                                 Photos
@@ -179,7 +169,7 @@ $conn->close();
                                             <label for="video" class="form-label text-primary">Current Video</label>
                                             <?php if (!empty($video)): ?>
                                                 <video width="320" height="240" controls>
-                                                    <source src="uploads/videos/<?php echo htmlspecialchars($video); ?>"
+                                                    <source src="uploads/vudeos/<?php echo htmlspecialchars($video); ?>"
                                                         type="video/mp4">
                                                     Your browser does not support the video tag.
                                                 </video>
@@ -212,17 +202,12 @@ $conn->close();
 
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
-                            Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:blue">Bhavi
-                            Creations</a>
-                            </p>
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
                         </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
                 <!-- End of Footer -->
 
             </div>
@@ -250,7 +235,7 @@ $conn->close();
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.php">Logout</a>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
             </div>
