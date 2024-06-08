@@ -77,28 +77,26 @@ if (!isset($_SESSION['username'])) {
 
                     <form class="user"  action="../includes/register_handler.php" method="POST">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <div class="col-md-6 mb-3 ">
                                         <input type="text" class="form-control form-control-user"   id="username" name="username" required
                                             placeholder="User Name" value=' <?php echo htmlspecialchars($_SESSION['username']); ?>' >
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-md-6  mb-3 ">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Last Name">
                                     </div>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                
+                                
+                                    <div class="  col-md-6  mb-3 ">
+                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                            placeholder="Email Address">
+                                    </div>
+                               
+                                    <div class="col-md-6 mb-3  ">
                                         <input type="password" class="form-control form-control-user"
                                              placeholder="Password"  id="password" name="password" required>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
-                                    </div>
+                                   
                                 </div>
                              
                             </form>
