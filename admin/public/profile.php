@@ -1,13 +1,4 @@
-<?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
-
+ 
 
 
 <!DOCTYPE html>
@@ -78,11 +69,11 @@ if (!isset($_SESSION['username'])) {
                     <form class="user"  action="../includes/register_handler.php" method="POST">
                                 <div class="form-group row">
                                     <div class="col-md-6 mb-3 ">
-                                        <input type="text" class="form-control form-control-user"   id="username" name="username" required
-                                            placeholder="User Name" value=' <?php echo htmlspecialchars($_SESSION['username']); ?>' >
+                                        <input type="text" class="form-control form-control-user"   id="username" name="username" 
+                                            placeholder="User Name"   >
                                     </div>
                                     <div class="col-md-6  mb-3 ">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"  name="last_name" 
                                             placeholder="Last Name">
                                     </div>
                                 

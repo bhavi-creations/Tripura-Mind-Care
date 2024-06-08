@@ -108,7 +108,7 @@
                                                     toolbar: [
                                                         [{ header: [1, 2, false] }],
                                                         ['bold', 'italic', 'underline'],
-                                                        ['image', 'code-block'],
+                                                        [ 'code-block'],
                                                     ],
                                                 },
                                                 placeholder: 'Compose an epic...',
@@ -118,12 +118,19 @@
                                                 document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
                                             };
                                         </script>
-
+                                        <div class="mb-3">
+                                            <label for="formFileMultiple" class="form-label text-primary my-2">Choose
+                                                Photos
+                                                (you can choose multiple photos)</label>
+                                            <input class="form-control" name="photos[]" type="file"
+                                                id="formFileMultiple" multiple>
+                                        </div>
                                         <div class="mb-3">
                                             <label for="formFileVideo" class="form-label text-primary">Choose
                                                 Video</label>
                                             <input class="form-control" name="video" type="file" id="formFileVideo"
                                                 required>
+                                                
                                         </div>
                                         <div class='row p-3'>
                                             <div class='col-xl-7 col-sm-2'></div>
