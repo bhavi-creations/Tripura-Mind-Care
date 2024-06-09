@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Check if username already exists
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE first_name = ?");
     $stmt->execute([$username]);
     if ($stmt->rowCount() > 0) {
         header('Location: ../public/register.php?error=Username already exists');
@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Hash the password and insert into database
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $pdo->prepare("INSERT INTO users (username, last_name, email, password) VALUES (?, ?, ?, ?)");
+    $hashedPassword = md5($password);
+    $stmt = $pdo->prepare("INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)");
     if ($stmt->execute([$username, $lastName, $email, $hashedPassword])) {
         header('Location: ../public/login.php');
         exit();

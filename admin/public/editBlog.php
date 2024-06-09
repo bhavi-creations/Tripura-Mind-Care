@@ -166,16 +166,6 @@ $conn->close();
                                                 id="formFileMultiple" multiple>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="video" class="form-label text-primary">Current Video</label>
-                                            <?php if (!empty($video)): ?>
-                                                <video width="320" height="240" controls>
-                                                    <source src="uploads/vudeos/<?php echo htmlspecialchars($video); ?>"
-                                                        type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            <?php else: ?>
-                                                <p>No video available.</p>
-                                            <?php endif; ?>
                                         </div>
                                         <div class="mb-3">
                                             <label for="formFileMultiple" class="form-label text-primary">Choose

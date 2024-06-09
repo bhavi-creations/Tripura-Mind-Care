@@ -92,7 +92,7 @@ $result = $conn->query($sql);
                 <div id="selectedBlogId" style="display: none">' . $counter . '</div>
                 <h2 class="mb-3">' . $row['title'] . '</h2>
                 <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                  <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                  <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <p>Published On ';
@@ -141,7 +141,7 @@ $result = $conn->query($sql);
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
-                                                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                    <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
                                                         style="width:100px;height:100px;margin:5px;" class="img-fluid">
                                                 </div>
                                             </div>
@@ -156,7 +156,7 @@ $result = $conn->query($sql);
                                 echo $row['content'];
                                 echo '<div style="display: none" id="lastchild"><video onclick="swapDivs(`' . $counter . '`)"
                                 class="custom-video" controls autoplay style="width: 100%; height: auto;">
-                                <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
@@ -166,16 +166,16 @@ $result = $conn->query($sql);
                                     echo '<div class="col-md-3  order-1 order-md-2 scrollable-div">';
                                 }
                             } else {
-                                echo '<div id="sidebardiv' . $counter . '" onclick="swapDivs(`' . $counter . '`)"><video
-                                    class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                echo '<div id="sidebardiv' . $counter . '""><video
+                                    class="custom-video" autoplay controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
+                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <h6 class="mb-3">' . $row['title'] . '</h6>';
+                                <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>';
                                 echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
-                  <h2 class="mb-3">' . $row['title'] . '</h2>
-                  <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                    <source src="admin/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                  <h2 class="mb-3" >' . $row['title'] . '</h2>
+                  <video class="custom-video" autoplay controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
+                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                   <p>Published On ';
@@ -189,7 +189,7 @@ $result = $conn->query($sql);
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
-                                                    <img src="admin/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                    <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
                                                         style="width:100px;height:100px;margin:5px;" class="img-fluid">
                                                 </div>
                                             </div>

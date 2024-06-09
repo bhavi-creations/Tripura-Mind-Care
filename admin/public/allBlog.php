@@ -100,6 +100,10 @@
                                         echo "
                                             <div class='col-12 col-md-4 col-custom'>
             <div class='card card-custom'>
+            <video src='./uploads/videos/{$row['video']}' class='card-img-top' autoplay controls>
+    Your browser does not support the video tag.
+</video>
+
             <div class='card-body'>
             <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
             <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
