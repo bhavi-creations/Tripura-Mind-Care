@@ -95,43 +95,12 @@ $result = $conn->query($sql);
                   <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <p>Published On ';
+                <p>Published On  ';
                                 ?>
 
 
 
-                                <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="swiper-wrapper">
-
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <img src="assets/img/memory_loss/dp-1 (1).webp" class="img-fluid">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <img src="assets/img/memory_loss/dp-1 (2).webp" class="img-fluid">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <img src="assets/img/memory_loss/dp-1 (3).webp" class="img-fluid">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <img src="assets/img/memory_loss/dp-1 (4).webp" class="img-fluid">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div> -->
+                            
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                 echo '</p>
                 <div class="row d-flex my-3">';
@@ -144,7 +113,7 @@ $result = $conn->query($sql);
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                        class="img-fluid">
+                                                        class="img-fluid" style='width:200px; height:200px;'>
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
@@ -184,10 +153,11 @@ $result = $conn->query($sql);
                   <p>Published On ';
                                 ?>
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
-                                echo '</p>
-                  <div class="row d-flex my-3">';
+                               
+                                 echo '</p>
+                <div class="row d-flex my-3">';
                                 echo '<div>'; ?>
-                                <?php if (!empty($row['photos'])): ?>
+                               <?php if (!empty($row['photos'])): ?>
                                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                                     <div class="swiper-wrapper">
 
@@ -195,17 +165,18 @@ $result = $conn->query($sql);
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                         class="img-fluid">
+                                                        class="img-fluid" style='width:200px; height:200px;'>
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
-                                        </div>
-                                        </div>
+                                    </div>
+                                    </div>
                                 <?php else: ?>
                                     <p>No photos available.</p>
                                 <?php endif; ?>
                                 <?php echo '</div>';
-                                echo '</div>';
+                                echo '
+                        </div>';
                                 echo $row['content'];
                                 echo '</div></div>';
                             }
