@@ -138,14 +138,17 @@ $result = $conn->query($sql);
                                 echo '<div>'; ?>
                                 <?php if (!empty($row['photos'])): ?>
                                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="swiper-wrapper">
+
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                        style="width:100px;height:100px;margin:5px;" class="img-fluid">
+                                                        class="img-fluid">
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
+                                    </div>
                                     </div>
                                 <?php else: ?>
                                     <p>No photos available.</p>
@@ -186,15 +189,18 @@ $result = $conn->query($sql);
                                 echo '<div>'; ?>
                                 <?php if (!empty($row['photos'])): ?>
                                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="swiper-wrapper">
+
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
                                             <div class="swiper-slide">
                                                 <div class="testimonial-item">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                        style="width:100px;height:100px;margin:5px;" class="img-fluid">
+                                                         class="img-fluid">
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
-                                    </div>
+                                        </div>
+                                        </div>
                                 <?php else: ?>
                                     <p>No photos available.</p>
                                 <?php endif; ?>
