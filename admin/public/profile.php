@@ -1,4 +1,4 @@
- 
+
 
 
 <!DOCTYPE html>
@@ -44,6 +44,16 @@
                 <?php
                 include 'navbar.php';
                 ?>
+                 <?php
+
+include '../includes/db.php';
+   $id=$_SESSION['user_id'];
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ? ");
+    $stmt->execute([$id]);
+    $user = $stmt->fetch();
+   
+
+ ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -58,36 +68,36 @@
                             
                             </div>
                         
-                        <div class="  mb-4">
+                        <!-- <div class="  mb-4">
                             <button class="h3 mb-0   btn btn-primary btn-user">Edit </button>
                         
-                        </div>
+                        </div> -->
                     </div>
 
 
 
-                    <form class="user"  action="../includes/register_handler.php" method="POST">
+                    <form class="user"  action="profileUpdate.php" method="POST">
                                 <div class="form-group row">
                                     <div class="col-md-6 mb-3 ">
                                         <input type="text" class="form-control form-control-user"   id="username" name="username" 
-                                            placeholder="User Name"   >
+                                            placeholder="User Name"   value=<?php echo $user['first_name'];  ?> >
                                     </div>
                                     <div class="col-md-6  mb-3 ">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"  name="last_name" 
-                                            placeholder="Last Name">
+                                            placeholder="Last Name" value=<?php echo $user['last_name'];  ?>>
                                     </div>
                                 
                                 
                                     <div class="  col-md-6  mb-3 ">
                                         <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                            placeholder="Email Address">
+                                            placeholder="Email Address" name='email' value=<?php echo $user['email'];  ?>>
                                     </div>
                                
                                     <div class="col-md-6 mb-3  ">
                                         <input type="password" class="form-control form-control-user"
                                              placeholder="Password"  id="password" name="password" required>
                                     </div>
-                                   
+                                    <button type="reset" class="btn btn-danger mx-4">Clear</button><button type="submit" class="btn btn-success">Submit</button>
                                 </div>
                              
                             </form>
