@@ -100,7 +100,7 @@
                                         echo "
                                             <div class='col-12 col-md-4 col-custom'>
             <div class='card card-custom'>
-            <video src='./uploads/videos/{$row['video']}' class='card-img-top' autoplay controls>
+            <video src='./uploads/videos/{$row['video']}' class='card-img-top' autoplay muted controls>
     Your browser does not support the video tag.
 </video>
 

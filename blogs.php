@@ -48,7 +48,11 @@ $result = $conn->query($sql);
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <link href="assets/css/style.css" rel="stylesheet">
+ 
+    
 </head>
+
+
 
 <body>
 
@@ -84,149 +88,169 @@ $result = $conn->query($sql);
 
                 <div class="row" id="blogRow" >
                     <?php
-                    $counter = 0;
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            if ($counter === 0) {
-                                echo '<div class="col-md-9  order-2 order-md-1" id="selectedblog">
-                <div id="selectedBlogId" style="display: none">' . $counter . '</div>
-                <h2 class="mb-3">' . $row['title'] . '</h2>
-                <video class="custom-video" autoplay controls style="width: 100%; height: auto;">
-                  <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <p>Published On  ';
-                                ?>
+                        $counter = 0;
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                if ($counter === 0) {
+                                    echo '<div class="col-md-9  order-2 order-md-1" id="selectedblog">
+                                    <div id="selectedBlogId" style="display: none">' . $counter . '</div>
+                                    <h2 class="mb-3">' . $row['title'] . '</h2>
+                                    <video class="custom-video" autoplay   controls style="width: 100%; height: auto;">
+                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                    </video>
+                                    <p>Published On  ';
+                    ?>
 
 
 
                             
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
-                                echo '</p>
-                <div class="row d-flex my-3">';
-                                echo '<div>'; ?>
-                                <?php if (!empty($row['photos'])): ?>
-                                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="swiper-wrapper">
+                                    echo '</p>
+                                    <div class="row d-flex my-3">';
+        
 
-                                        <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                           
-                                                <div class="testimonial-item mx-4">
-                                                    <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                        class="img-fluid" style='width:200px; height:200px;'>
-                                         
+                                    
+                                    echo '<div>';
+                                ?>
+                                        <?php if (!empty($row['photos'])): ?>
+                                            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                                <div class="swiper-wrapper row"> <!-- Added 'row' class for Bootstrap grid -->
+
+                                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                                        <div class="testimonial-item col-6 col-md-4 col-lg-3"> <!-- Added Bootstrap grid classes -->
+                                                            <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                                class="img-fluid my-2"  >
+                                                        </div>
+                                                    <?php endforeach; ?>
+
+                                                </div>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    </div>
-                                <?php else: ?>
-                                    <p>No photos available.</p>
-                                <?php endif; ?>
-                                <?php echo '</div>';
-                                echo '
-                        </div>';
-                                echo $row['content'];
-                                echo '<div style="display: none" id="lastchild"><video onclick="swapDivs(`' . $counter . '`)"
-                                class="custom-video" controls autoplay style="width: 100%; height: auto;">
-                                <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
-                        </div>';
+                                        <?php else: ?>
+                                            <p>No photos available.</p>
+                                        <?php endif; ?>
+                                    <?php echo '</div>';  
+
+                                    echo '
+                                    </div>';
+                                    echo $row['content'];
+                                        echo '
+                                        <div style="display: none" id="lastchild">
+                                                <video onclick="swapDivs(`' . $counter . '`)"
+                                                    class="custom-video" controls muted autoplay style="width: 100%; height: auto;">
+                                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                                <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
+                                        </div>';
                                 echo '</div>';
+
+
+
+
+
                                 if ($result->num_rows > 1) {
                                     echo '<div class="col-md-3  order-1 order-md-2 scrollable-div">';
-                                }
-                            } else {
-                                echo '<div id="sidebardiv' . $counter . '""><video
-                                    class="custom-video" autoplay controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
-                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>';
-                                echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
-                  <h2 class="mb-3" >' . $row['title'] . '</h2>
-                  <video class="custom-video" autoplay controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
-                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  <p>Published On ';
-                                ?>
-                                <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
-                               
-                                 echo '</p>
-                <div class="row d-flex my-3">';
-                                echo '<div>'; ?>
-                               <?php if (!empty($row['photos'])): ?>
-                                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="swiper-wrapper">
+                                    }
+                                    } else {
+                                        echo '<div id="sidebardiv' . $counter . '""><video
+                                            class="custom-video" autoplay muted controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
+                                            <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>';
+                                        echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
+                                        <h2 class="mb-3" >' . $row['title'] . '</h2>
+                                        <video class="custom-video" autoplay muted controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
+                                            <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <p>Published On ';
+                                        ?>
+                                        <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
+                                    
+                                        echo '</p>
+                                         <div class="row d-flex my-3">';
+  
 
-                                        <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                           
-                                                <div class="testimonial-item mx-4">
-                                                    <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
-                                                        class="img-fluid" style='width:200px; height:200px;'>
-                                           
+                                        echo '<div>'; ?>
+                                        <?php if (!empty($row['photos'])): ?>
+                                            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                                <div class="swiper-wrapper row"> <!-- Added 'row' class for Bootstrap grid -->
+
+                                                    <?php foreach (json_decode($row['photos']) as $photo): ?>
+                                                        <div class="testimonial-item col-6 col-md-4 col-lg-3"> <!-- Added Bootstrap grid classes -->
+                                                            <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
+                                                                class="img-fluid my-2" >
+                                                        </div>
+                                                    <?php endforeach; ?>
+
+                                                </div>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    </div>
-                                <?php else: ?>
-                                    <p>No photos available.</p>
-                                <?php endif; ?>
-                                <?php echo '</div>';
-                                echo '
-                        </div>';
-                                echo $row['content'];
-                                echo '</div></div>';
-                            }
-                            $counter++;
-                        }
-                        if ($result->num_rows > 1) {
-                            echo '</div>';
-                        }
-                    }
+                                        <?php else: ?>
+                                            <p>No photos available.</p>
+                                        <?php endif; ?>
+                                        <?php echo '</div>';
+
+
+
+
+                                        echo '
+                                        </div>';
+                                        echo $row['content'];
+                                        echo '</div></div>';
+                                    }
+                                    $counter++;
+                                    }
+                                    if ($result->num_rows > 1) {
+                                        echo '</div>';
+                                    }
+                                }
                     ?>
                 </div>
             </div>
         </section>
-
-
-
-
+ 
 
         <script>
-            function swapDivs(currentDivId) {
-                var currentDiv = document.getElementById('sidebardiv' + currentDivId);
-                currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
-                console.log(document.getElementById('selectedBlogId').innerText);
-                let selectedBlog = document.getElementById('selectedblog');
-                let currentDivLastChild = currentDiv.querySelector('#lastchild');
-                let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
-                var currentDivNewDiv = document.createElement('div');
-                currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
-                let currentDivNewDivLastChild = document.createElement('div');
-                currentDivNewDivLastChild.id = 'lastchild';
-                currentDivNewDivLastChild.style.display = 'none';
-                selectedBlog.removeChild(selectedDivLastChild);
-                selectedBlog.removeChild(document.getElementById('selectedBlogId'));
-                currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
-                currentDivNewDiv.appendChild(currentDivNewDivLastChild);
-                let selectedBlogNewDiv = document.createElement('div');
-                selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
-                let selectedBlogIDNewDiv = document.createElement('div');
-                selectedBlogIDNewDiv.id = 'selectedBlogId';
-                selectedBlogIDNewDiv.innerText = currentDivId;
-                let selectedBlogNewDivLastChild = document.createElement('div');
-                selectedBlogNewDivLastChild.id = 'lastchild';
-                selectedBlogNewDivLastChild.style.display = 'none';
-                currentDiv.removeChild(currentDivLastChild);
-                selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
-                selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
-                selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
-                currentDiv.innerHTML = currentDivNewDiv.innerHTML;
-                selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
-            }
+          function swapDivs(currentDivId) {
+    var currentDiv = document.getElementById('sidebardiv' + currentDivId);
+    currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
+    console.log(document.getElementById('selectedBlogId').innerText);
+    let selectedBlog = document.getElementById('selectedblog');
+    let currentDivLastChild = currentDiv.querySelector('#lastchild');
+    let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
+    var currentDivNewDiv = document.createElement('div');
+    currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
+    let currentDivNewDivLastChild = document.createElement('div');
+    currentDivNewDivLastChild.id = 'lastchild';
+    currentDivNewDivLastChild.style.display = 'none';
+    selectedBlog.removeChild(selectedDivLastChild);
+    selectedBlog.removeChild(document.getElementById('selectedBlogId'));
+    currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
+    currentDivNewDiv.appendChild(currentDivNewDivLastChild);
+    let selectedBlogNewDiv = document.createElement('div');
+    selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
+    let selectedBlogIDNewDiv = document.createElement('div');
+    selectedBlogIDNewDiv.id = 'selectedBlogId';
+    selectedBlogIDNewDiv.innerText = currentDivId;
+    let selectedBlogNewDivLastChild = document.createElement('div');
+    selectedBlogNewDivLastChild.id = 'lastchild';
+    selectedBlogNewDivLastChild.style.display = 'none';
+    currentDiv.removeChild(currentDivLastChild);
+    selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
+    selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
+    selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
+    currentDiv.innerHTML = currentDivNewDiv.innerHTML;
+    selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
+
+    // Manage volume
+    let currentDivVideo = currentDiv.querySelector('video');
+    let selectedBlogVideo = selectedBlog.querySelector('video');
+    if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
+    if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
+}
+
         </script>
     </main>
     <!-- ======= Footer ======= -->
