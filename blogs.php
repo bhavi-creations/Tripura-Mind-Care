@@ -110,11 +110,11 @@ $result = $conn->query($sql);
                                     <div class="swiper-wrapper">
 
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-item">
+                                           
+                                                <div class="testimonial-item mx-4">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
                                                         class="img-fluid" style='width:200px; height:200px;'>
-                                                </div>
+                                         
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
@@ -162,11 +162,11 @@ $result = $conn->query($sql);
                                     <div class="swiper-wrapper">
 
                                         <?php foreach (json_decode($row['photos']) as $photo): ?>
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-item">
+                                           
+                                                <div class="testimonial-item mx-4">
                                                     <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo"
                                                         class="img-fluid" style='width:200px; height:200px;'>
-                                                </div>
+                                           
                                             </div>
                                         <?php endforeach; ?>
                                     </div>

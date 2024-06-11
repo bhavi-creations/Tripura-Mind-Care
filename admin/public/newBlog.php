@@ -94,30 +94,26 @@
                                         <!-- Create the editor container -->
                                         <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
                                             CONTENT</label>
-                                        <div id="editor" style='height:200px;'></div>
+                                            <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 
-                                        <input name="content" id="formcontentdata" style="display: none"></input>
+<!-- Create the editor container -->
+<div id="editor" style='height:200px;'>
 
-                                        <!-- Include the Quill library -->
-                                        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+</div>
+<input name="content" id="formcontentdata" style="display: none"></input>
 
-                                        <!-- Initialize Quill editor -->
-                                        <script>
-                                            const quill = new Quill('#editor', {
-                                                modules: {
-                                                    toolbar: [
-                                                        [{ header: [1, 2, false] }],
-                                                        ['bold', 'italic', 'underline'],
-                                                        [ 'code-block'],
-                                                    ],
-                                                },
-                                                placeholder: 'Compose an epic...',
-                                                theme: 'snow', // or 'bubble'
-                                            });
-                                            document.querySelector('#addblogform').onsubmit = function () {
+<!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  const quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+  document.querySelector('#addblogform').onsubmit = function () {
                                                 document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
                                             };
-                                        </script>
+</script>
                                         <div class="mb-3">
                                             <label for="formFileMultiple" class="form-label text-primary my-2">Choose
                                                 Photos
