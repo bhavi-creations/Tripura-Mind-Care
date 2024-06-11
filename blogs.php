@@ -57,9 +57,7 @@ $result = $conn->query($sql);
         padding: 50px;
     }
 
-    #selectedblog {
-        order: 2;
-    }
+     
 }
 </style>
 
@@ -108,7 +106,7 @@ $result = $conn->query($sql);
                             while ($row = $result->fetch_assoc()) {
                                 if ($counter === 0) {
                                     echo '
-                                    <div class="col-md-9  order-2 order-md-1" id="selectedblog">
+                                    <div class="col-md-9  order-1 order-md-1" id="selectedblog">
                                     <div id="selectedBlogId" style="display: none">' . $counter . '</div>
                                     <h2 class="mb-3">' . $row['title'] . '</h2>
                                     <video class="custom-video" autoplay   controls style="width: 100%; height: auto;">
@@ -116,13 +114,14 @@ $result = $conn->query($sql);
                                     Your browser does not support the video tag.
                                     </video>
                                     <p>Published On  ';
-                    ?>
+                                ?>
 
 
 
                             
                                 <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                     echo '</p>
+                                    
                                     <div class="row d-flex my-3">';
         
 
@@ -166,7 +165,7 @@ $result = $conn->query($sql);
 
 
                                 if ($result->num_rows > 1) {
-                                    echo '<div class="col-md-3  order-1 order-md-2 scrollable-div">';
+                                    echo '<div class="col-md-3  order-2 order-md-2 scrollable-div">';
                                     }
                                     } else {
                                         echo '<div id="sidebardiv' . $counter . '""><video
@@ -268,6 +267,21 @@ $result = $conn->query($sql);
 
         // Scroll to main video section
         selectedBlog.scrollIntoView({ behavior: 'smooth' });
+
+
+
+        function toggleContent(counter) {
+                var hiddenContent = document.getElementById('hiddenContent' + counter);
+                var readMore = hiddenContent.nextElementSibling;
+
+                if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+                    hiddenContent.style.display = 'block';
+                    readMore.textContent = 'Read Less';
+                } else {
+                    hiddenContent.style.display = 'none';
+                    readMore.textContent = 'Read More';
+                }
+            }
     }
 </script>
 
