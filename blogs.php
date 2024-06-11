@@ -50,6 +50,21 @@ $result = $conn->query($sql);
     <link href="assets/css/style.css" rel="stylesheet">
  
     
+    <style>@media (max-width: 767px) {
+    .scrollable-div {
+        order: 1;
+        margin-bottom: 150px;
+        padding: 50px;
+    }
+
+    #selectedblog {
+        order: 2;
+    }
+}
+</style>
+
+
+
 </head>
 
 
@@ -92,7 +107,8 @@ $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 if ($counter === 0) {
-                                    echo '<div class="col-md-9  order-2 order-md-1" id="selectedblog">
+                                    echo '
+                                    <div class="col-md-9  order-2 order-md-1" id="selectedblog">
                                     <div id="selectedBlogId" style="display: none">' . $counter . '</div>
                                     <h2 class="mb-3">' . $row['title'] . '</h2>
                                     <video class="custom-video" autoplay   controls style="width: 100%; height: auto;">
@@ -131,19 +147,19 @@ $result = $conn->query($sql);
                                         <?php endif; ?>
                                     <?php echo '</div>';  
 
-                                    echo '
-                                    </div>';
-                                    echo $row['content'];
                                         echo '
-                                        <div style="display: none" id="lastchild">
-                                                <video onclick="swapDivs(`' . $counter . '`)"
-                                                    class="custom-video" controls muted autoplay style="width: 100%; height: auto;">
-                                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                                <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
                                         </div>';
-                                echo '</div>';
+                                        echo $row['content'];
+                                            echo '
+                                            <div style="display: none" id="lastchild">
+                                                    <video onclick="swapDivs(`' . $counter . '`)"
+                                                        class="custom-video" controls muted autoplay style="width: 100%; height: auto;">
+                                                        <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                    <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
+                                            </div>';
+                                        echo '</div>';
 
 
 
@@ -213,45 +229,48 @@ $result = $conn->query($sql);
  
 
         <script>
-          function swapDivs(currentDivId) {
-    var currentDiv = document.getElementById('sidebardiv' + currentDivId);
-    currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
-    console.log(document.getElementById('selectedBlogId').innerText);
-    let selectedBlog = document.getElementById('selectedblog');
-    let currentDivLastChild = currentDiv.querySelector('#lastchild');
-    let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
-    var currentDivNewDiv = document.createElement('div');
-    currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
-    let currentDivNewDivLastChild = document.createElement('div');
-    currentDivNewDivLastChild.id = 'lastchild';
-    currentDivNewDivLastChild.style.display = 'none';
-    selectedBlog.removeChild(selectedDivLastChild);
-    selectedBlog.removeChild(document.getElementById('selectedBlogId'));
-    currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
-    currentDivNewDiv.appendChild(currentDivNewDivLastChild);
-    let selectedBlogNewDiv = document.createElement('div');
-    selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
-    let selectedBlogIDNewDiv = document.createElement('div');
-    selectedBlogIDNewDiv.id = 'selectedBlogId';
-    selectedBlogIDNewDiv.innerText = currentDivId;
-    let selectedBlogNewDivLastChild = document.createElement('div');
-    selectedBlogNewDivLastChild.id = 'lastchild';
-    selectedBlogNewDivLastChild.style.display = 'none';
-    currentDiv.removeChild(currentDivLastChild);
-    selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
-    selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
-    selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
-    currentDiv.innerHTML = currentDivNewDiv.innerHTML;
-    selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
+    function swapDivs(currentDivId) {
+        var currentDiv = document.getElementById('sidebardiv' + currentDivId);
+        currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
+        console.log(document.getElementById('selectedBlogId').innerText);
+        let selectedBlog = document.getElementById('selectedblog');
+        let currentDivLastChild = currentDiv.querySelector('#lastchild');
+        let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
+        var currentDivNewDiv = document.createElement('div');
+        currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
+        let currentDivNewDivLastChild = document.createElement('div');
+        currentDivNewDivLastChild.id = 'lastchild';
+        currentDivNewDivLastChild.style.display = 'none';
+        selectedBlog.removeChild(selectedDivLastChild);
+        selectedBlog.removeChild(document.getElementById('selectedBlogId'));
+        currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
+        currentDivNewDiv.appendChild(currentDivNewDivLastChild);
+        let selectedBlogNewDiv = document.createElement('div');
+        selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
+        let selectedBlogIDNewDiv = document.createElement('div');
+        selectedBlogIDNewDiv.id = 'selectedBlogId';
+        selectedBlogIDNewDiv.innerText = currentDivId;
+        let selectedBlogNewDivLastChild = document.createElement('div');
+        selectedBlogNewDivLastChild.id = 'lastchild';
+        selectedBlogNewDivLastChild.style.display = 'none';
+        currentDiv.removeChild(currentDivLastChild);
+        selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
+        selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
+        selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
+        currentDiv.innerHTML = currentDivNewDiv.innerHTML;
+        selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
 
-    // Manage volume
-    let currentDivVideo = currentDiv.querySelector('video');
-    let selectedBlogVideo = selectedBlog.querySelector('video');
-    if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
-    if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
-}
+        // Manage volume
+        let currentDivVideo = currentDiv.querySelector('video');
+        let selectedBlogVideo = selectedBlog.querySelector('video');
+        if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
+        if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
 
-        </script>
+        // Scroll to main video section
+        selectedBlog.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
