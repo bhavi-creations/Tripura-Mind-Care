@@ -185,10 +185,16 @@ $result = $conn->query($sql);
                                         <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
                                     
                                         echo '</p>
-                                         <div class="row d-flex my-3">';
-  
+                                         <div class="row d-flex my-3">
+                                         <div class="row">
+                                         <div class="col-9"></div>
+                                         <button onclick="hideDiv()" class="btn btn-primary col-3" id="read">Read More</button>
+                                         
+                                           </div>
+                                         ';
 
-                                        echo '<div>'; ?>
+
+                                        echo '<div id="images" style="display:none;">'; ?>
                                         <?php if (!empty($row['photos'])): ?>
                                             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                                                 <div class="swiper-wrapper row"> <!-- Added 'row' class for Bootstrap grid -->
@@ -204,7 +210,9 @@ $result = $conn->query($sql);
                                             </div>
                                         <?php else: ?>
                                             <p>No photos available.</p>
-                                        <?php endif; ?>
+                                        <?php endif; 
+                                        echo $row['content'];
+                                        ?>
                                         <?php echo '</div>';
 
 
@@ -212,7 +220,6 @@ $result = $conn->query($sql);
 
                                         echo '
                                         </div>';
-                                        echo $row['content'];
                                         echo '</div></div>';
                                     }
                                     $counter++;
@@ -228,6 +235,23 @@ $result = $conn->query($sql);
  
 
         <script>
+          state=1; 
+    function hideDiv() {
+
+if(state==0){
+            var div = document.getElementById('images');
+            document.getElementById('read').innerHTML = "Read More";
+            div.style.display = 'none';
+            state=1;
+}else{
+    var div = document.getElementById('images');
+            div.style.display = 'block';
+            document.getElementById('read').innerHTML = "Read less";
+            state=0;
+}
+        }
+
+
     function swapDivs(currentDivId) {
         var currentDiv = document.getElementById('sidebardiv' + currentDivId);
         currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
