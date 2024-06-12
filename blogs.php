@@ -119,7 +119,7 @@ $result = $conn->query($sql);
                                     <div class="col-md-9  order-1 order-md-1" id="selectedblog">
                                     <div id="selectedBlogId" style="display: none">' . $counter . '</div>
                                     <h2 class="mb-3">' . $row['title'] . '</h2>
-                                    <video class="custom-video" autoplay   controls style="width: 100%; height: auto;">
+                                    <video class="custom-video" muted  autoplay    controls style="width: 100%; height: auto;">
                                     <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>
