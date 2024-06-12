@@ -246,78 +246,69 @@ $result = $conn->query($sql);
 
         <script>
           state=1; 
-    function hideDiv() {
+            function hideDiv() {
 
-if(state==0){
-            var div = document.getElementById('images');
-            document.getElementById('read').innerHTML = "Read More";
-            div.style.display = 'none';
-            state=1;
-}else{
-    var div = document.getElementById('images');
-            div.style.display = 'block';
-            document.getElementById('read').innerHTML = "Read less";
-            state=0;
-}
-        }
-
-
-    function swapDivs(currentDivId) {
-        var currentDiv = document.getElementById('sidebardiv' + currentDivId);
-        currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
-        console.log(document.getElementById('selectedBlogId').innerText);
-        let selectedBlog = document.getElementById('selectedblog');
-        let currentDivLastChild = currentDiv.querySelector('#lastchild');
-        let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
-        var currentDivNewDiv = document.createElement('div');
-        currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
-        let currentDivNewDivLastChild = document.createElement('div');
-        currentDivNewDivLastChild.id = 'lastchild';
-        currentDivNewDivLastChild.style.display = 'none';
-        selectedBlog.removeChild(selectedDivLastChild);
-        selectedBlog.removeChild(document.getElementById('selectedBlogId'));
-        currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
-        currentDivNewDiv.appendChild(currentDivNewDivLastChild);
-        let selectedBlogNewDiv = document.createElement('div');
-        selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
-        let selectedBlogIDNewDiv = document.createElement('div');
-        selectedBlogIDNewDiv.id = 'selectedBlogId';
-        selectedBlogIDNewDiv.innerText = currentDivId;
-        let selectedBlogNewDivLastChild = document.createElement('div');
-        selectedBlogNewDivLastChild.id = 'lastchild';
-        selectedBlogNewDivLastChild.style.display = 'none';
-        currentDiv.removeChild(currentDivLastChild);
-        selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
-        selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
-        selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
-        currentDiv.innerHTML = currentDivNewDiv.innerHTML;
-        selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
-
-        // Manage volume
-        let currentDivVideo = currentDiv.querySelector('video');
-        let selectedBlogVideo = selectedBlog.querySelector('video');
-        if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
-        if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
-
-        // Scroll to main video section
-        selectedBlog.scrollIntoView({ behavior: 'smooth' });
-
-
-
-        function toggleContent(counter) {
-                var hiddenContent = document.getElementById('hiddenContent' + counter);
-                var readMore = hiddenContent.nextElementSibling;
-
-                if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
-                    hiddenContent.style.display = 'block';
-                    readMore.textContent = 'Read Less';
-                } else {
-                    hiddenContent.style.display = 'none';
-                    readMore.textContent = 'Read More';
+                if(state==0){
+                            var div = document.getElementById('images');
+                            document.getElementById('read').innerHTML = "Read More";
+                            div.style.display = 'none';
+                            state=1;
                 }
+                else{
+                    var div = document.getElementById('images');
+                            div.style.display = 'block';
+                            document.getElementById('read').innerHTML = "Read less";
+                            state=0;
+                }
+                        
             }
-    }
-</script>
+
+
+            function swapDivs(currentDivId) {
+                var currentDiv = document.getElementById('sidebardiv' + currentDivId);
+                currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
+                console.log(document.getElementById('selectedBlogId').innerText);
+                let selectedBlog = document.getElementById('selectedblog');
+                let currentDivLastChild = currentDiv.querySelector('#lastchild');
+                let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
+                var currentDivNewDiv = document.createElement('div');
+                currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
+                let currentDivNewDivLastChild = document.createElement('div');
+                currentDivNewDivLastChild.id = 'lastchild';
+                currentDivNewDivLastChild.style.display = 'none';
+                selectedBlog.removeChild(selectedDivLastChild);
+                selectedBlog.removeChild(document.getElementById('selectedBlogId'));
+                currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
+                currentDivNewDiv.appendChild(currentDivNewDivLastChild);
+                let selectedBlogNewDiv = document.createElement('div');
+                selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
+                let selectedBlogIDNewDiv = document.createElement('div');
+                selectedBlogIDNewDiv.id = 'selectedBlogId';
+                selectedBlogIDNewDiv.innerText = currentDivId;
+                let selectedBlogNewDivLastChild = document.createElement('div');
+                selectedBlogNewDivLastChild.id = 'lastchild';
+                selectedBlogNewDivLastChild.style.display = 'none';
+                currentDiv.removeChild(currentDivLastChild);
+                selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
+                selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
+                selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
+                currentDiv.innerHTML = currentDivNewDiv.innerHTML;
+                selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
+
+                // Manage volume
+                let currentDivVideo = currentDiv.querySelector('video');
+                let selectedBlogVideo = selectedBlog.querySelector('video');
+                if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
+                if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
+
+                // Scroll to main video section
+                selectedBlog.scrollIntoView({ behavior: 'smooth' });
+
+
+
+        
+            }
+        </script>
 
     </main>
     <!-- ======= Footer ======= -->
