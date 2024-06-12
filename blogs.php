@@ -50,16 +50,26 @@ $result = $conn->query($sql);
     <link href="assets/css/style.css" rel="stylesheet">
  
     
-    <style>@media (max-width: 767px) {
+    <style>
+    @media (max-width: 767px) {
     .scrollable-div {
         order: 1;
         margin-bottom: 150px;
         padding: 50px;
     }
 
+     .readmore_btn{
+        width: 150px;
+        margin-left: 15px;
+     }
+    }
+
+    .readmore_btn{
+        width: 120px;
      
-}
-</style>
+    
+     }
+    </style>
 
 
 
@@ -188,7 +198,7 @@ $result = $conn->query($sql);
                                          <div class="row d-flex my-3">
                                          <div class="row">
                                          <div class="col-9"></div>
-                                         <button onclick="hideDiv()" class="btn btn-primary col-3" id="read">Read More</button>
+                                         <button onclick="hideDiv()" class="btn btn-primary col-3 readmore_btn" id="read">Read More</button>
                                          
                                            </div>
                                          ';
