@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = 'tripura';
-$user = 'root';
-$pass = '';
+$db = 'drakrtripuramindcareandpolyclinic';
+$user = 'drakrtripuramind';
+$pass = '9rTHaMUNGyUaaW1';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);

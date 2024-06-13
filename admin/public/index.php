@@ -160,9 +160,9 @@
                                 <?php
                                 // Database connection (replace with your actual database connection details)
                                 $servername = "localhost";
-                                $username = "root";
-                                $password = "";
-                                $dbname = "tripura";
+                                $username = "drakrtripuramind";
+                                $password = "9rTHaMUNGyUaaW1";
+                                $dbname = "drakrtripuramindcareandpolyclinic";
 
                                 // Create connection
                                 $conn = new mysqli($servername, $username, $password, $dbname);
