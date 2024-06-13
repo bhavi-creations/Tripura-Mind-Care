@@ -29,8 +29,11 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
 
-
-
+<style>
+  .fnt_wight{
+    font-weight: 600;
+  }
+</style>
 </head>
 
 <body>
@@ -109,11 +112,11 @@
 
             <p class=poetsen_font>
               At Tripura Mind Care, we provide comprehensive mental health services under the expert guidance of Dr. S.
-              Akhila, MD (psychiatry), and K. Hemalatha, a seasoned psychologist.
+              Akhila, MD (psychiatry), female seasoned psychologist.
             </p>
             <ul>
               <li class="para_font"><i class="bi bi-check-circle"></i> 1. Personalized Treatment: Each patient receives
-                a tailored treatment plan designed by Dr. S. Akhila, MD (psychiatry), and K. Hemalatha, psychologist,
+                a tailored treatment plan designed by Dr. S. Akhila, MD (psychiatry), and Dr. P. Srinivas, MD (General Medicine)
                 ensuring individualized care.</li>
               <li class="para_font"><i class="bi bi-check-circle"></i>2. Holistic Approach: Combining medical expertise
                 with psychological support, we focus on the overall well-being of our patients, addressing both physical
@@ -133,6 +136,46 @@
 
           </div>
         </div>
+
+        <div class="section-title mt-5">
+          <h2  >Our Team</h2>
+        </div>
+
+
+        <div class="row text-center">
+           
+            <div class="col-md-3 my-2">
+
+            <h3 style="font-size: 27px;">Dr. Akhila .S</h3>
+            <p class="fnt_wight">M.D., (Psychiatry)</p>
+            <p>Asst. Professor of Psychiatry</p>
+            <p>Neuropsychiatrist</p>
+
+            </div>
+            <div class="col-md-3 my-2">
+
+            <h3 style="font-size: 27px;">Dr. E. Rama Chandra Rao</h3>
+            <p class="fnt_wight">M.D., (Psychiatry)</p>
+            <p>Professor of Psychiatry</p>
+            <p>Consultant Neuropsychiatrist</p>
+
+            </div>
+            <div class="col-md-3 my-2">
+
+            <h3 style="font-size: 27px;">Dr. M.B.S. Mounika</h3>
+            <p class="fnt_wight">DNB (General Surgeon)</p>
+
+            </div>
+            <div class="col-md-3 my-2">
+
+            <h3 style="font-size: 27px;">Dr. P. Srinivas</h3>
+            <p class="fnt_wight">M.D.,  (General Medicine)</p>
+            <p>Consultant General Physician</p>
+
+            </div>
+        </div>
+
+        
 
       </div>
     </section>
@@ -1016,22 +1059,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>` 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ 
     <!-- End Departments Section -->
 
     <!-- ======= Testimonials Section ======= -->
