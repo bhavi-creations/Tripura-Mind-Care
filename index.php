@@ -1775,7 +1775,7 @@
                     2-56-5,
                     SANTHI NAGAR,ROAD NO.1,<br>
                     100 BUILDING CENTER,<br>
-                    HOUSING BOARD COLONY<br>
+                     
                     OPP. CHRISTIAN COMMUNITY HALL<br>
                     NEAR NARAYANA JR. COLLEGE<br>
                     KAKINADA-533003 <br>
@@ -1859,35 +1859,77 @@
             </div>
           </div>
           <div class="col-xl-2 col-lg-2 col-md-6 col-5 footer-links">
-            <h4>For Adults</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Depression</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Anxiety</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Fear</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Anger</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Nerve Weakness</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Sleep Problems</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Migraine</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Stress</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities">Memory Loss</a></li>
+              <h4>Our Services</h4>
+              <ul>
+               
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#facilities">OCD</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#facilities">BDM</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">PAI</a>
+                </li>
+                 <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities"> PTSD</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Schizophrenia</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Bipolar Disorders</a>
+                </li>
+              
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Anxiety Disorders</a>
+                </li>
+              </ul>
+            </div>
 
+            <div class="col-xl-3 col-lg-3 col-md-6 col-7 footer-links">
+              <h4>Our Services</h4>
 
-            </ul>
-          </div>
-
-          <div class="col-xl-3 col-lg-3 col-md-6 col-7 footer-links">
-            <h4>For Children</h4>
-
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Stress</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Exam Stress for Children</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Lagging Behind in Studies</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Easily Distracted</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Excessive Mischievousness</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Losing Concentration Easily</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#facilities2">Headache</a></li>
-            </ul>
-          </div>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Adjustment Disorder</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Paraphilic Disorders</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Phobia Management</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Depressive Disorders</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Personality Disorders</a>
+                </li>
+                
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Sleep-Wake Disorders</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href=" #facilities">Elimination Disorders</a>
+                </li>
+               
+              </ul>
+            </div>
 
           <div class="col-xl-3 col-lg-4 col-md-6 footer-newsletter footerbgcolor">
             <h4>Contact us</h4>
@@ -1903,7 +1945,7 @@
               ROAD NO.1,<br>
               100 BUILDING CENTER,<br>
 
-              HOUSING BOARD COLONY<br>
+               
 
               OPP. CHRISTIAN COMMUNITY HALL
               <br>
