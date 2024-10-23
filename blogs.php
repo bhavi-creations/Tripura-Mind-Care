@@ -403,30 +403,103 @@ $result = $conn->query($sql);
             </div>
         </div>
 
-        <div class="footer-area-bottom theme-bg">
-            <div class="container">
-                <div class="row  pt-4">
-                    <div class="col-xl-8 col-lg-9 col-md-12 col-12">
-                        <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:#ffffff"> ©2024 Tripura-Mind-Care . All Rights Reserved.
-                                Designed &
-                                Developed by <a href="https://bhavicreations.com/" target="_blank"
-                                    style="text-decoration: none;color:#ffffff">Bhavi
-                                    Creations</a></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-3 col-md-12 col-12">
-                        <div class="footer-widget__copyright-info info-direction ">
-                            <p class="mini_text"><a href="terms.html" style="text-decoration: none;color:#ffffff">Terms
-                                    & conditions
-                                </a>
-                                <a href="privacy.html" style="text-decoration: none;color:#ffffff"> Privacy & policy</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="footer-area-bottom theme-bg pb-3" style="background-color: #01539D">
+       <div class="container">
+         <div class="row pt-4">
+           <div class="col-md-6 col-12">
+             <div class="footer-widget__copyright-info info-direction">
+               <p class="last_text">
+                 <a
+                   href="terms.html"
+                   style="text-decoration: none; color: #ffffff">Terms & conditions :
+                 </a>
+                 <a
+                   href="privacy.html"
+                   style="text-decoration: none; color: #ffffff">
+                   Privacy & policy</a>
+               </p>
+             </div>
+           </div>
+
+           <div class="col-md-6 col-12 second_divv_end_brand">
+             <div
+               class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
+               <a
+                 href="https://bhavicreations.com/"
+                 target="_blank"
+                 style="
+                      text-decoration: none;
+                      color: #ffffff;
+                      display: flex;
+                      align-items: center;
+                    ">
+                 <p class="mini_text last_text mb-0" style="color: white">
+                   Branding By @
+                 </p>
+                 <img
+                   src="assets/img/bhavi_logo/Bhavi_Branding_Stamp.png"
+                   class="img-fluid brand_image"
+                   alt="" />
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <style>
+         @media (min-width: 1200px) {
+           .second_divv_end_brand {
+             padding-left: 35%;
+             margin-top: -10px;
+           }
+
+           .brand_image {
+             width: 23%;
+             margin-top: 0%;
+             margin-left: 5px;
+           }
+         }
+
+         @media (min-width: 992px) and (max-width: 1200px) {
+           .second_divv_end_brand {
+             padding-left: 32%;
+             margin-top: -10px;
+           }
+
+           .brand_image {
+             width: 23%;
+             margin-top: 0%;
+             margin-left: 5px;
+           }
+         }
+
+         @media (max-width: 768px) {
+           .second_divv_end_brand {
+             padding-left: 4%;
+             margin-top: 0px;
+           }
+
+           .brand_image {
+             width: 12%;
+             margin-top: 0%;
+             margin-left: 5px;
+           }
+         }
+
+         @media (min-width: 768px) and (max-width: 992px) {
+           .second_divv_end_brand {
+             padding-left: 23%;
+             margin-top: -10px;
+           }
+
+           .brand_image {
+             width: 23%;
+             margin-top: 0%;
+             margin-left: 5px;
+           }
+         }
+       </style>
+     </div>
     </footer>
     <!-- End Footer -->
 
