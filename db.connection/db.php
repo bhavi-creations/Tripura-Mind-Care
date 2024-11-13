@@ -1,9 +1,16 @@
 <?php
 $host = 'localhost';
-$db = 'oncologist';
-$user = 'root';
-$pass = '';
- 
+// Determine if the server is localhost
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+    $user = "root";
+    $pass = "";
+    $db = "drakrtripuramindcareandpolyclinic";
+} else {
+    $user = " ";
+    $pass = " ";
+    $db = " ";
+}
+
 
 
 try {
@@ -12,6 +19,3 @@ try {
 } catch (PDOException $e) {
     die("Could not connect to the database $db :" . $e->getMessage());
 }
-?>
-
-

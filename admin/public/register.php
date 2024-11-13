@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title> Tripura Mind Care</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body style="background: #A9A8D4;"  >
 
     <div class="container">
 
@@ -31,7 +31,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                 <div class="col-lg-6 d-none d-lg-block  ">
-                                <img src="img/login img.webp" alt="login image" class="img-fluid">
+                                <img src="img/register.jpg" alt="login image" class="img-fluid">
                             </div>
                     <div class="col-lg-6">
                         <div class="p-5">

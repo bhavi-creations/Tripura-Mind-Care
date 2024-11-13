@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tripura-Mind-Care - Dashboard</title>
+    <title>Tripura Mind Care - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -44,30 +41,31 @@
                 <?php
                 include 'navbar.php';
                 ?>
-                 <?php
+                <?php
 
-include '../includes/db.php';
-   $id=$_SESSION['user_id'];
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ? ");
-    $stmt->execute([$id]);
-    $user = $stmt->fetch();
-   
+                include '../../db.connection/db.php';
+                $id = $_SESSION['user_id'];
+                $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ? ");
+                $stmt->execute([$id]);
+                $user = $stmt->fetch();
 
- ?>
+
+                ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                     <div class="row justify-content-between">  
+                    <div class="row justify-content-between">
 
+                     
 
-                         <div class="    mb-4">
-                             <h1 class="h3 mb-0 text-gray-800">Profile </h1>
-                            
-                            </div>
-                        
+                        <div class="    mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Profile </h1>
+
+                        </div>
+
                         <!-- <div class="  mb-4">
                             <button class="h3 mb-0   btn btn-primary btn-user">Edit </button>
                         
@@ -76,31 +74,27 @@ include '../includes/db.php';
 
 
 
-                    <form class="user"  action="profileUpdate.php" method="POST">
-                                <div class="form-group row">
-                                    <div class="col-md-6 mb-3 ">
-                                        <input type="text" class="form-control form-control-user"   id="username" name="username" 
-                                            placeholder="User Name"   value=<?php echo $user['first_name'];  ?> >
-                                    </div>
-                                    <div class="col-md-6  mb-3 ">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"  name="last_name" 
-                                            placeholder="Last Name" value=<?php echo $user['last_name'];  ?>>
-                                    </div>
-                                
-                                
-                                    <div class="  col-md-6  mb-3 ">
-                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                            placeholder="Email Address" name='email' value=<?php echo $user['email'];  ?>>
-                                    </div>
-                               
-                                    <div class="col-md-6 mb-3  ">
-                                        <input type="password" class="form-control form-control-user"
-                                             placeholder="Password"  id="password" name="password" required>
-                                    </div>
-                                    <button type="reset" class="btn btn-danger mx-4">Clear</button><button type="submit" class="btn btn-success">Submit</button>
-                                </div>
-                             
-                            </form>
+                    <form class="user" action="profileUpdate.php" method="POST">
+                        <div class="form-group row">
+                            <div class="col-md-6 mb-3 ">
+                                <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="User Name" value=<?php echo $user['first_name'];  ?>>
+                            </div>
+                            <div class="col-md-6  mb-3 ">
+                                <input type="text" class="form-control form-control-user" id="exampleLastName" name="last_name" placeholder="Last Name" value=<?php echo $user['last_name'];  ?>>
+                            </div>
+
+
+                            <div class="  col-md-6  mb-3 ">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" name='email' value=<?php echo $user['email'];  ?>>
+                            </div>
+
+                            <div class="col-md-6 mb-3  ">
+                                <input type="password" class="form-control form-control-user" placeholder="Password" id="password" name="password" required>
+                            </div>
+                            <button type="reset" class="btn btn-danger mx-4">Clear</button><button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+
+                    </form>
                 </div>
 
 
@@ -118,11 +112,11 @@ include '../includes/db.php';
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                    <div class="footer-widget__copyright">
-              <p class="mini_text" style="color:black"> ©2024 Tripura-Mind-Care . All Rights Reserved. Designed &
-                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
-                  Creations</a></p>
-            </div>
+                        <div class="footer-widget__copyright">
+                            <p class="mini_text" style="color:black"> ©2024 Tripura Mind Care . All Rights Reserved. Designed &
+                                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
+                                    Creations</a></p>
+                        </div>
                     </div>
                 </div>
             </footer>

@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = isset($_POST['title']) ? $_POST['title'] : '';
     $main_content = isset($_POST['main_content']) ? $_POST['main_content'] : '';
     $full_content = isset($_POST['full_content']) ? $_POST['full_content'] : '';
-    $service = isset($_POST['service']) ? $_POST['service'] : '';  // Capture selected service
+    $service = isset($_POST['service']) ? $_POST['service'] : '';
 
     // Ensure required fields are not empty
-    if (empty($title) || empty($main_content) || empty($full_content) || empty($service)) {
-        die("Error: Title, Main Content, Full Content, and Service cannot be empty.");
+    if (empty($title) || empty($main_content) || empty($full_content)) {
+        die("Error: Title, Main Content, and Full Content cannot be empty.");
     }
 
     // Handle file uploads for title image and main image
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Execute the SQL statement
     if ($stmt->execute()) {
         echo "Blog post published/updated successfully!";
-        header("Location: allBlog.php");  // Redirect after successful submission
+        header("Location: allBlog.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
