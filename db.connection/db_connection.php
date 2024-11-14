@@ -7,9 +7,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $password = "";
     $dbname = "drakrtripuramindcareandpolyclinic";
 } else {
-    $username = " ";
-    $password = " ";
-    $dbname = " ";
+    $username = "drakrtripuramind";
+    $password = "9rTHaMUNGyUaaW1";
+    $dbname = "drakrtripuramindcareandpolyclinic";
     
 }
 
