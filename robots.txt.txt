@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /privacy-policy/
+Disallow: /terms-and-conditions/
+Disallow: /search/
+
+# Allowing all user-agents to access the main website pages
+Allow: /
+
+# Sitemap location
+Sitemap: https://drakrtripuramindcareandpolyclinic.com/sitemap.xml
