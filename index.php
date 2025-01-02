@@ -6,9 +6,21 @@
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
    <title>Tripura-Mind-Care</title>
-   <meta content="" name="description">
-   <meta content="" name="keywords">
+   <meta content="Expert Mental Health Care in Kakinada - Dr. AKR Tripura Mind Care & Polyclinic" name="title">
 
+   <meta content="Discover comprehensive mental health treatments in Kakinada at Dr. AKR Tripura Mind Care & Polyclinic. Specializing in schizophrenia, anger management, and holistic psychiatric care for your well-being." name="description">
+   <meta content="Mental health care in Kakinada
+Psychiatric treatment in Kakinada
+Schizophrenia treatment Kakinada
+Anger management therapy Kakinada
+Dr. AKR Tripura Polyclinic
+Best psychiatrist in Kakinada
+Anxiety and depression treatment Kakinada
+Stress management clinic in Kakinada
+Bipolar disorder treatment Kakinada
+Holistic mental health services Kakinada" name="keywords">
+<meta name="google-site-verification" content="WFUCxyFCbkotaqJ_3pNPODN9O8mp60PdssRAW0K8ZTY" />
+<link rel="canonical" href="https://drakrtripuramindcareandpolyclinic.com/" />
    <!-- Favicons -->
    <link href="assets/img/tripura/nav_logo.png" rel="icon">
    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -27,12 +39,7 @@
    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
    <link href="assets/css/style.css" rel="stylesheet">
-
-   <style>
-     .fnt_wight {
-       font-weight: 600;
-     }
-   </style>
+   
  </head>
 
  <body>
