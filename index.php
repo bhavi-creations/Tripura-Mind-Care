@@ -48,7 +48,7 @@ Holistic mental health services Kakinada" name="keywords">
    <header id="header" class="fixed-top">
      <div class="container d-flex align-items-center">
 
-       <a href="index.php" class="logo me-auto">
+       <a href="index.php" class="logo me-auto"> 
          <img src="assets/img/tripura/new-nav-image.png" alt="">
        </a>
 
